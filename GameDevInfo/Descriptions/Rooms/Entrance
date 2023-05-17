@@ -6,3 +6,10 @@ You enter a foyer at the beginning of the castle.  The floating candles have set
 
 Desc 3: Ghost not Present Ghost item present:
 You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the ghostly figure has shrunken to a size you can put in your pocket.  The door to leave the castle is shut, but it seems like the door on the right is ajar.
+
+# Just playing with an example:
+room_desc_entrance {
+    'ghost_present' : FLAVOR TEXT1,
+    'item_present' : FLAVOR TEXT3,
+    'completed' : FLAVOR TEXT2
+}
