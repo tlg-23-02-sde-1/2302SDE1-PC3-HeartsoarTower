@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 
 class HeartsoarTower {
-//    TODO: Remove nouns and verbs from here once JSON implemented
+    //    TODO: Remove nouns and verbs from here once JSON implemented
     List<String> NOUNS;
     List<String> VERBS;
     private TextParser textParser = new TextParser(VERBS, NOUNS);
 
-//    TODO: Place in proper location once game loop established
+    //    TODO: Place in proper location once game loop established
     // Take input from the user via the console:
     Scanner scanner = new Scanner(System.in);
     String input = scanner.nextLine();
@@ -30,6 +30,19 @@ class HeartsoarTower {
             System.out.println("Invalid. Please enter 'New Game' to start the game.");
         }
     }
+    void basicInfo() {
+        System.out.println("Welcome, Harmony, to the enchanted world of Terra Motus.");
+        System.out.println("Story:");
+        System.out.println("The King and Queen of Terra Motus are grief-stricken. An evil curse has sealed away their young Prince Timore in a tower at the edge of their kingdom.");
+        System.out.println("The royalty have requested you, Harmony, to enter the tower and save their gentle son.");
+        System.out.println("Armed with only your trusted sword and an amulet wrapped in a handkerchief given by the queen, you approach the ominous tower, unsure of what lies within.");
+        System.out.println("Objective:");
+        System.out.println("Your mission is to navigate through the tower, overcoming challenges along the way.");
+        System.out.println("To win, you must free Prince Timore from the curse by reaching the top of the tower.");
+
+        System.out.println("Are you ready to begin your journey, Harmony? The fate of Prince Timore rests in your hands!");
+
+    }
 
     void quitGame() {
         System.out.println("Would you like to quit the game? Y/N");
@@ -47,6 +60,8 @@ class HeartsoarTower {
             newGame();
         }
     }
+
+
 
 }
 
