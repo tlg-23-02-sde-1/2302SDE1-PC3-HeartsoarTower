@@ -1,5 +1,5 @@
 package com.tlg.heartsoar;
 
-class Monster {
+public class Monster {
 
 }

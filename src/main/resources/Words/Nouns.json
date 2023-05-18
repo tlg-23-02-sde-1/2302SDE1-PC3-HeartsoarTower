@@ -1,0 +1,53 @@
+{
+  "left": [
+    "west"
+  ],
+  "right": [
+    "east"
+  ],
+  "up": [
+    "north",
+    "climb"
+  ],
+  "down": [
+    "south",
+    "descend"
+  ],
+  "candle": [
+    "candles"
+  ],
+  "fridge": [
+    "refrigerator",
+    "coldbox",
+    "cold"
+  ],
+  "stove": [
+    "oven",
+    "element"
+  ],
+  "sword": [],
+  "amulet": [],
+  "ghost": [],
+  "door": [],
+  "sandwich": [],
+  "goblin": [],
+  "island": [],
+  "counter": [],
+  "toaster": [],
+  "mix": [],
+  "mixer": [],
+  "succubus": [],
+  "werewolf": [],
+  "bear": [],
+  "direbear": [],
+  "vampire": [],
+  "mirror": [],
+  "zombie": [],
+  "alien": [],
+  "window": [],
+  "prince": [],
+  "timore": [],
+  "tim": [],
+  "nazi": [],
+  "gun": []
+}

@@ -1,0 +1,32 @@
+{
+  "go": [
+    "move",
+    "run",
+    "walk",
+    "climb",
+    "stairs"
+  ],
+  "use": [
+    "utilize",
+    "cast",
+    "swing",
+    "stab",
+    "using",
+    "used",
+    "casting",
+    "shoot",
+    "throw"
+  ],
+  "talk": [
+    "converse",
+    "ask"
+  ],
+  "open": [
+  ],
+  "grab": [
+    "pick",
+    "steal",
+    "pocket",
+    "store"
+  ]
+}
