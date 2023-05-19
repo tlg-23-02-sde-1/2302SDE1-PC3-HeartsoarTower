@@ -9,25 +9,44 @@ class HeartsoarTower {
     List<String> NOUNS;
     List<String> VERBS;
     private TextParser textParser = new TextParser(VERBS, NOUNS);
+    private Player player;
 
-    //    TODO: Place in proper location once game loop established
-    // Take input from the user via the console:
-    Scanner scanner = new Scanner(System.in);
-    String input = scanner.nextLine();
-    String[] instruct = textParser.validCombo(input);
+    void gameLoop() {
+        boolean isRunning = true;
+
+        newGame();
+        basicInfo();
+
+        while (isRunning) {
+            System.out.println("Enter a command:");
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
+            String [] instruct = textParser.validCombo(input);
+
+            if (instruct == null) {
+                System.out.println("Invalid Command.");
+                continue;
+            }
+            if (instruct[0].equalsIgnoreCase("quit")) {
+                isRunning = !quitGame();
+            }
+        }
+    }
 
     void newGame() {
         Scanner inputScanner = new Scanner(System.in);
         String userInput;
 
         System.out.println("Welcome to Heartsoar Tower!");
-        System.out.println("Please enter 'New Game' to start a new game:");
-        userInput = inputScanner.nextLine();
-        if ("New Game".equalsIgnoreCase(userInput)) {
-            System.out.println("Starting a new game...");
-            //playGame()
-        } else {
-            System.out.println("Invalid. Please enter 'New Game' to start the game.");
+        while (true) {
+            System.out.println("Please enter 'New Game' to start a new game:");
+            userInput = inputScanner.nextLine();
+            if ("New Game".equalsIgnoreCase(userInput)) {
+                System.out.println("Starting a new game...");
+                break;
+            } else {
+                System.out.println("Invalid. Please enter 'New Game' to start the game.");
+            }
         }
     }
     void basicInfo() {
@@ -44,8 +63,9 @@ class HeartsoarTower {
 
     }
 
-    void quitGame() {
+    boolean quitGame() {
         System.out.println("Would you like to quit the game? Y/N");
+        Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         while (!"Y".equalsIgnoreCase(userInput) && !"Yes".equalsIgnoreCase(userInput) &&
                 !"N".equalsIgnoreCase(userInput) && !"No".equalsIgnoreCase(userInput)) {
@@ -57,11 +77,15 @@ class HeartsoarTower {
             System.exit(0);
         } else {
             System.out.println("Returning to the start..");
-            newGame();
+            return false;
         }
+        return true;
     }
 
-
+    public static void main(String[] args) {
+        HeartsoarTower game = new HeartsoarTower();
+        game.gameLoop();
+    }
 
 }
 
