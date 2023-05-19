@@ -1,6 +1,7 @@
 plugins {
     id 'com.github.johnrengelman.shadow' version "${shadowVersion}"
     id 'application'
+    id 'java'
 }
 
 java {
@@ -13,7 +14,15 @@ java {
 application {
     mainClass = project.mainClass
 }
+jar {
+    manifest {
+        attributes "Main-Class": "com.tlg.heartsoar.HeartsoarTower"
+    }
 
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
 run {
     standardInput = System.in
 }
