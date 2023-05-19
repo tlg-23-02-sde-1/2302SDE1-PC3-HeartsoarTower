@@ -1,0 +1,6 @@
+{
+  "name" : "Casper",
+  "description" : " A vaporous cloud that seems to phase in and out of existence at the front of you, but completely frozen mid-step towards you with both feet six inches off the cobble floor while in your peripheral.",
+  "onUse" : "You give the zombie a friend and they finally not alone.",
+  "isStorable" : true
+}
