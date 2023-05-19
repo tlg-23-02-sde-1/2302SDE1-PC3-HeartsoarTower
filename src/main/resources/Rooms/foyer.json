@@ -15,7 +15,7 @@
   ],
   "monster": null,
   "neighborRooms": {
-    "Left"  : "Entrance",
-    "Right" : "Kitchen"
+    "left"  : "Entrance",
+    "right" : "Kitchen"
   }
 }
