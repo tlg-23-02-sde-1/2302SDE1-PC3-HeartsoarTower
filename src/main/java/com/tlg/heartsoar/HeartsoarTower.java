@@ -15,6 +15,9 @@ class HeartsoarTower {
     private TextParser textParser = new TextParser(VERBS, NOUNS);
     private Player player;
 
+    HeartsoarTower() throws IOException {
+    }
+
     void gameLoop() {
         boolean isRunning = true;
 
@@ -85,7 +88,7 @@ class HeartsoarTower {
         return true;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         HeartsoarTower game = new HeartsoarTower();
         game.gameLoop();
     }

@@ -17,7 +17,7 @@ public class TextParser {
         VERBS = verbs;
     }
 
-    private String[] validCombo(String input){
+    public String[] validCombo(String input){
         String verb = null;
         String noun = null;
 
