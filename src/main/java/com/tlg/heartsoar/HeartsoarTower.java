@@ -1,25 +1,19 @@
 package com.tlg.heartsoar;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
+
 import com.tlg.language.TextParser;
 
 import java.io.IOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Stream;
+import java.util.*;
 
 class HeartsoarTower {
     Factory factory = new Factory();
     List<Room> rooms = factory.getRooms();
-    Collection<String[]> VERBS = factory.getVerbs();
-    Collection<String[]> NOUNS = factory.getNouns();
+    List<Item> items = factory.getItems();
+    List<Monster> monsters = factory.getMonsters();
+
+
+    TreeMap<String, ArrayList<String>> VERBS = factory.getVerbs();
+    TreeMap<String, ArrayList<String>> NOUNS = factory.getNouns();
 
     HeartsoarTower() throws IOException {
 

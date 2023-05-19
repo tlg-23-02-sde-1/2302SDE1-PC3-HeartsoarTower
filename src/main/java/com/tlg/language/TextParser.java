@@ -1,39 +1,36 @@
 package com.tlg.language;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public class TextParser {
-    //    TODO: Make singleton
-    private final List<String> NOUNS;
-    private final List<String> VERBS;
+    private final TreeMap<String, ArrayList<String>> VERBS;
+    private final TreeMap<String, ArrayList<String>> NOUNS;
 
-    //    TODO: Read nouns and verbs from JSON file
-    GsonBuilder builder = new GsonBuilder();
-    Gson gson = builder.create();
-    String jsonFile = "src/main/resources/language.json";
-
-
-
-
-    public TextParser(List<String> noun, List<String> verbs) {
-        NOUNS = noun;
+    public TextParser(TreeMap<String, ArrayList<String>> nouns, TreeMap<String, ArrayList<String>> verbs) {
+        NOUNS = nouns;
         VERBS = verbs;
     }
 
     private String[] validCombo(String input){
         String verb = null;
         String noun = null;
-        // Split the input by spaces.  Check for a verb.  Check for a noun.
-        String[] words = input.split(" ");
-        for (String word : words) {
-            if (VERBS.contains(word)) {
-                verb = word;
+
+        for (Map.Entry<String, ArrayList<String>> entry : VERBS.entrySet()) {
+            if (input.contains(entry.getKey())) {
+                verb = entry.getKey();
+                break;
             }
-            if (NOUNS.contains(word)) {
-                noun = word;
+        }
+        for (Map.Entry<String, ArrayList<String>> entry : NOUNS.entrySet()) {
+            if (input.contains(entry.getKey())) {
+                noun = entry.getKey();
+                break;
             }
         }
         if (verb == null || noun == null) {

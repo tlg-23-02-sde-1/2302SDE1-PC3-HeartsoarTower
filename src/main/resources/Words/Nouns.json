@@ -1,53 +1,60 @@
 {
   "left": [
+    "left",
     "west"
   ],
   "right": [
+    "right",
     "east"
   ],
   "up": [
+    "up",
     "north",
     "climb"
   ],
   "down": [
+    "down",
     "south",
     "descend"
   ],
   "candle": [
+    "candle",
     "candles"
   ],
   "fridge": [
+    "fridge",
     "refrigerator",
     "coldbox",
     "cold"
   ],
   "stove": [
+    "stove",
     "oven",
     "element"
   ],
-  "sword": [],
-  "amulet": [],
-  "ghost": [],
-  "door": [],
-  "sandwich": [],
-  "goblin": [],
-  "island": [],
-  "counter": [],
-  "toaster": [],
-  "mix": [],
-  "mixer": [],
-  "succubus": [],
-  "werewolf": [],
-  "bear": [],
-  "direbear": [],
-  "vampire": [],
-  "mirror": [],
-  "zombie": [],
-  "alien": [],
-  "window": [],
-  "prince": [],
-  "timore": [],
-  "tim": [],
-  "nazi": [],
-  "gun": []
+  "sword": ["sword"],
+  "amulet": ["amulet"],
+  "ghost": ["ghost"],
+  "door": ["door"],
+  "sandwich": ["sandwich"],
+  "goblin": ["goblin"],
+  "island": ["island"],
+  "counter": ["counter"],
+  "toaster": ["toaster"],
+  "mix": ["mix"],
+  "mixer": ["mixer"],
+  "succubus": ["succubus"],
+  "werewolf": ["werewolf"],
+  "bear": ["bear"],
+  "direbear": ["direbear"],
+  "vampire": ["vampire"],
+  "mirror": ["mirror"],
+  "zombie": ["zombie"],
+  "alien": ["alien"],
+  "window": ["window"],
+  "prince": ["prince"],
+  "timore": ["timore"],
+  "tim": ["tim"],
+  "nazi": ["nazi"],
+  "gun": ["gun"]
 }

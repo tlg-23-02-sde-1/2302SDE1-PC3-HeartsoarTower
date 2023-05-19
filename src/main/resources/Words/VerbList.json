@@ -1,5 +1,6 @@
 {
   "go": [
+    "go",
     "move",
     "run",
     "walk",
@@ -7,6 +8,7 @@
     "stairs"
   ],
   "use": [
+    "use",
     "utilize",
     "cast",
     "swing",
@@ -19,18 +21,22 @@
     "give"
   ],
   "talk": [
+    "talk",
     "converse",
     "ask"
   ],
   "open": [
+    "open"
   ],
   "grab": [
+    "grab",
     "pick",
     "steal",
     "pocket",
     "store"
   ],
   "listen": [
+    "listen",
     "hear"
   ]
 }
