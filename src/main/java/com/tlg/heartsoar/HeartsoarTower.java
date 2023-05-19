@@ -1,13 +1,17 @@
 package com.tlg.heartsoar;
 
-import java.util.List;
+import com.tlg.language.TextParser;
 
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 class HeartsoarTower {
-    //    TODO: Remove nouns and verbs from here once JSON implemented
-    List<String> NOUNS;
-    List<String> VERBS;
+    private Factory factory = new Factory();
+    private List<Room> rooms = factory.getRooms();
+    private List<Item> items = factory.getItems();
+    private List<Monster> monsters = factory.getMonsters();
+    private TreeMap<String, ArrayList<String>> VERBS = factory.getVerbs();
+    private TreeMap<String, ArrayList<String>> NOUNS = factory.getNouns();
     private TextParser textParser = new TextParser(VERBS, NOUNS);
     private Player player;
 
@@ -32,7 +36,6 @@ class HeartsoarTower {
             }
         }
     }
-
     void newGame() {
         Scanner inputScanner = new Scanner(System.in);
         String userInput;
@@ -86,6 +89,5 @@ class HeartsoarTower {
         HeartsoarTower game = new HeartsoarTower();
         game.gameLoop();
     }
-
 }
 

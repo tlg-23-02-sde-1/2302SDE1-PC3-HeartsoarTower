@@ -1,0 +1,6 @@
+{
+    "name" : "Magical Amulet",
+    "description" : "A magical amulet that glows with a soft light.",
+    "onUse" : "You are returned to an earlier moment.",
+    "isStorable" : true
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Foyer",
+  "desc": [
+    "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  As if the tower is mocking us, a key lays next to the door.",
+    "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  The keyhole is so deeply drilled into the door that your hand cannot fit inside.\n\n To the left you have the castle entrance, and to the right you have what might possibly be the kitchen.\n",
+    "You once again enter the gleaming foyer.  To the left is entrance.  To the right is the kitchen.  Up is to a dimly lit room."
+  ],
+  "nouns": [
+    "staircase",
+    "door",
+    "key",
+    "keyhole",
+    "kitchen",
+    "entrance"
+  ],
+  "monster": null,
+  "neighborRooms": {
+    "Left"  : "Entrance",
+    "Right" : "Kitchen"
+  }
+}
