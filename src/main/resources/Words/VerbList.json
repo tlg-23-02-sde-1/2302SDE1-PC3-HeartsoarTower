@@ -15,7 +15,8 @@
     "used",
     "casting",
     "shoot",
-    "throw"
+    "throw",
+    "give"
   ],
   "talk": [
     "converse",
@@ -28,5 +29,8 @@
     "steal",
     "pocket",
     "store"
+  ],
+  "listen": [
+    "hear"
   ]
 }
