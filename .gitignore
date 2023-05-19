@@ -31,8 +31,8 @@
 # - local properties
 local.properties
 
-# - build output
-/build/
+## - build output
+#/build/
 
 
 ### Maven ###
