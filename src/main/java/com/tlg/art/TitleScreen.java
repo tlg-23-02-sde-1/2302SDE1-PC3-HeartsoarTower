@@ -1,17 +1,15 @@
 package com.tlg.art;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class TitleScreen {
 
+    private static String titleScreen;
+
     public static void displayTitleScreen() {
-        String asciiArtFile = "src/main/resources/Ascii_art/TitleScreen.txt";
 
-        String asciiArt = readAsciiArtFromFile(asciiArtFile);
-
-        displayTitleScreen(asciiArt);
+        displayTitleScreen(titleScreen);
 
         try {
             Thread.sleep(4000);
@@ -22,18 +20,6 @@ public class TitleScreen {
         clearScreen();
     }
 
-    private static String readAsciiArtFromFile(String fileName) {
-        StringBuilder stringBuilder = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return stringBuilder.toString();
-    }
 
     private static void displayTitleScreen(String asciiArt) {
         System.out.print(asciiArt);
@@ -42,5 +28,22 @@ public class TitleScreen {
     private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    private static String readResource(String path) throws IOException {
+        try (InputStream is = TitleScreen.class.getResourceAsStream(path)) {
+            if (is == null) {
+                throw new FileNotFoundException("Resource not found: " + path);
+            }
+            return new String(is.readAllBytes(), StandardCharsets.UTF_8);
+        }
+    }
+
+    static {
+        try {
+            titleScreen = readResource("/Ascii_art/TitleScreen.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
