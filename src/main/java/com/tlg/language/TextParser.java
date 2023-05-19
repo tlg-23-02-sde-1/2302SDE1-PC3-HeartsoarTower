@@ -12,7 +12,7 @@ public class TextParser {
     private final TreeMap<String, ArrayList<String>> VERBS;
     private final TreeMap<String, ArrayList<String>> NOUNS;
 
-    public TextParser(TreeMap<String, ArrayList<String>> nouns, TreeMap<String, ArrayList<String>> verbs) {
+    public TextParser(TreeMap<String, ArrayList<String>> verbs, TreeMap<String, ArrayList<String>> nouns) {
         NOUNS = nouns;
         VERBS = verbs;
     }

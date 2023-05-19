@@ -106,7 +106,7 @@ class Factory {
     private void populateNouns() throws IOException {
         //        Make a list of verbs with their synonyms from the JSON file
         try {
-            Path nounFile = Paths.get("src/main/resources/Words/VerbList.json");
+            Path nounFile = Paths.get("src/main/resources/Words/Nouns.json");
             JsonElement jsonElement = gson.fromJson(Files.newBufferedReader(nounFile), JsonElement.class);
             NOUNS = gson.fromJson(jsonElement, TreeMap.class);
         } catch (IOException e) {

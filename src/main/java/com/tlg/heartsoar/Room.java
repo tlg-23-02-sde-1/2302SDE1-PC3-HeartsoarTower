@@ -1,5 +1,6 @@
 package com.tlg.heartsoar;
 
+import java.util.HashMap;
 import java.util.List;
 
 class Room {
@@ -10,10 +11,10 @@ class Room {
 //    desc[2] = Complete
     private List<String> nouns;
     private String monster;
-    private final Object neighborRooms;
+    private final HashMap<String, String> neighborRooms;
     private boolean isDiscovered;
 
-    public Room(String name, String[] desc, List<String> nouns, String monster, Object neighborRooms) {
+    public Room(String name, String[] desc, List<String> nouns, String monster, HashMap<String, String> neighborRooms) {
         this.name = name;
         this.desc = desc;
         this.nouns = nouns;
@@ -38,7 +39,7 @@ class Room {
         return monster;
     }
 
-    public Object getNeighborRooms() {
+    public HashMap<String, String> getNeighborRooms() {
         return neighborRooms;
     }
 

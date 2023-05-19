@@ -1,0 +1,6 @@
+{
+  "name" : "Revolver",
+  "description" : " A compact firearm that uses a rotating chamber to hold bullets. It has a solid frame, a grip for a comfortable hold, and a barrel for accurate shooting.",
+  "onUse" : "You pull the trigger.",
+  "isStorable" : true
+}

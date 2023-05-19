@@ -19,6 +19,7 @@ class HeartsoarTower {
 
 
     HeartsoarTower() throws IOException {
+        this.player = new Player(rooms);
     }
 
 
@@ -34,29 +35,49 @@ class HeartsoarTower {
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             String [] instruct = textParser.validCombo(input);
-//            Functions that we need REGARDLESS of what room we are in or our inventory state:
-            if (instruct == null) {
-                System.out.println("Invalid Command.");
-                continue;
-            }
-            if (instruct[0].equalsIgnoreCase("quit")) {
-                isRunning = !quitGame();
-            }
-            if (instruct[0].equalsIgnoreCase("help")) {
-//                TODO: Add help function
-                continue;
-            }
-            if (instruct[1].equalsIgnoreCase("inventory")) {
-//                TODO: Display Inventory
-                continue;
-            }
-            if (instruct[1].equals("look") && instruct[0] != null) {
-//                TODO: Look at item
-                continue;
-            }
-
+            alwaysAvailableCommands(instruct);
         }
     }
+
+    private void alwaysAvailableCommands(String[] instruct) {
+//            Functions that we need REGARDLESS of what room we are in or our inventory state:
+        if (instruct == null) {
+            System.out.println("Invalid Command.");
+        }
+        if (instruct[0].equalsIgnoreCase("quit")) {
+            quitGame();
+        }
+        if (instruct[0].equalsIgnoreCase("help")) {
+//                TODO: Add help function
+        }
+        if (instruct[1].equalsIgnoreCase("inventory")) {
+//                TODO: Display Inventory
+        }
+        if (instruct[1].equals("look") && instruct[0] != null) {
+//                TODO: Look at item
+        }
+        if (instruct[0].equals("go") && instruct[1] != null) {
+            HashMap acceptableDirections = player.getLocation().getNeighborRooms();
+            if (!acceptableDirections.containsKey(instruct[1])) {
+                System.out.println("You cannot go that way.");
+                return;
+            }
+//                TODO Step2: Ensure the monster will allow you to flee
+            player.setPrevLocation(player.getLocation());
+            Room nextRoom;
+            String direction = instruct[1];
+            String roomDir = player.getLocation().getNeighborRooms().get(direction);
+            for (Room room : rooms) {
+                if (room.getName().equals(roomDir)) {
+                    nextRoom = room;
+                    player.setLocation(nextRoom);
+                    System.out.println("You have entered the " + player.getLocation().getName() + ".");
+                    System.out.println(player.getLocation().getDesc());
+                }
+            }
+        }
+    }
+
     void newGame() {
         Scanner inputScanner = new Scanner(System.in);
         String userInput;
