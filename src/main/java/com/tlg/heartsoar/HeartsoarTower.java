@@ -3,7 +3,8 @@ package com.tlg.heartsoar;
 import com.tlg.art.TitleScreen;
 import com.tlg.language.TextParser;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 class HeartsoarTower {
@@ -16,9 +17,11 @@ class HeartsoarTower {
     private TextParser textParser = new TextParser(VERBS, NOUNS);
     private Player player;
 
+
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
     }
+
 
 
     void gameLoop() {
@@ -123,6 +126,7 @@ class HeartsoarTower {
         }
         return true;
     }
+
 
     public static void main(String[] args) throws IOException {
         HeartsoarTower game = new HeartsoarTower();
