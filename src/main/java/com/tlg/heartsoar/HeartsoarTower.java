@@ -1,5 +1,6 @@
 package com.tlg.heartsoar;
 
+import com.tlg.art.TitleScreen;
 import com.tlg.language.TextParser;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ class HeartsoarTower {
 
     void gameLoop() {
         boolean isRunning = true;
-
+        TitleScreen.displayTitleScreen();
         newGame();
         basicInfo();
 
@@ -29,7 +30,7 @@ class HeartsoarTower {
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             String [] instruct = textParser.validCombo(input);
-
+//            Functions that we need REGARDLESS of what room we are in or our inventory state:
             if (instruct == null) {
                 System.out.println("Invalid Command.");
                 continue;
@@ -37,6 +38,19 @@ class HeartsoarTower {
             if (instruct[0].equalsIgnoreCase("quit")) {
                 isRunning = !quitGame();
             }
+            if (instruct[0].equalsIgnoreCase("help")) {
+//                TODO: Add help function
+                continue;
+            }
+            if (instruct[1].equalsIgnoreCase("inventory")) {
+//                TODO: Display Inventory
+                continue;
+            }
+            if (instruct[1].equals("look") && instruct[0] != null) {
+//                TODO: Look at item
+                continue;
+            }
+
         }
     }
     void newGame() {

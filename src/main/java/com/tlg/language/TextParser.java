@@ -21,23 +21,28 @@ public class TextParser {
         String verb = null;
         String noun = null;
 
-        for (Map.Entry<String, ArrayList<String>> entry : VERBS.entrySet()) {
-            if (input.contains(entry.getKey())) {
-                verb = entry.getKey();
-                break;
+//        Split input into words.  Strip out punctuation. Convert to lower case.
+        input = input.replaceAll("[^a-zA-Z ]", "").toLowerCase();
+        String[] words = input.split(" ");
+//        Check each word in words to see if it is a verb or noun.
+        for (String word : words) {
+            for (Map.Entry<String, ArrayList<String>> entry : VERBS.entrySet()) {
+                if (entry.getValue().contains(word)) {
+                    verb = entry.getKey();
+                    break;
+                }
             }
-        }
-        for (Map.Entry<String, ArrayList<String>> entry : NOUNS.entrySet()) {
-            if (input.contains(entry.getKey())) {
-                noun = entry.getKey();
-                break;
+            for (Map.Entry<String, ArrayList<String>> entry : NOUNS.entrySet()) {
+                if (entry.getValue().contains(word)) {
+                    noun = entry.getKey();
+                    break;
+                }
             }
-        }
-        if (verb == null || noun == null) {
-            return null;
         }
         return new String[]{verb, noun};
     }
+
+
 
 
 

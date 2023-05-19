@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class TitleScreen {
 
-    public static void main(String[] args) {
+    public static void displayTitleScreen() {
         String asciiArtFile = "src/main/resources/Ascii_art/TitleScreen.txt";
 
         String asciiArt = readAsciiArtFromFile(asciiArtFile);
