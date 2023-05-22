@@ -45,6 +45,7 @@ class HeartsoarTower {
             System.out.println("Invalid Command.");
         }
         if (instruct[0].equalsIgnoreCase("quit")) {
+            System.out.println("Are you sure you want to quit? (Y/N)");
             quitGame();
         }
         if (instruct[0].equalsIgnoreCase("help")) {
