@@ -2,6 +2,9 @@ package com.tlg.art;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
+
+
 
 public class TitleScreen {
 
@@ -11,15 +14,12 @@ public class TitleScreen {
 
         displayTitleScreen(titleScreen);
 
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        System.out.println("\nPress Enter to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
 
         clearScreen();
     }
-
 
     private static void displayTitleScreen(String asciiArt) {
         System.out.print(asciiArt);
