@@ -52,13 +52,15 @@ class HeartsoarTower {
         else if (instruct[0].equalsIgnoreCase("help")) {
             help();
         }
-        else if (instruct[0].equalsIgnoreCase("inventory")) {
+        else if (instruct[1].equalsIgnoreCase("inventory")) {
+            System.out.println("You have the following items in your inventory:");
             System.out.println(player.getInventory());
         }
-        else if (instruct[0].equals("look") && instruct.length > 1) {
+        else if (instruct[0].equalsIgnoreCase("look")) {
+            System.out.println("You look around the room.");
             lookAtItem(instruct[1]);
         }
-        else if (instruct[0].equals("go") && instruct.length > 1) {
+        else if (instruct[0].equalsIgnoreCase("go")) {
             HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
             if (!acceptableDirections.containsKey(instruct[1])) {
                 System.out.println("You cannot go that way.");
@@ -77,6 +79,9 @@ class HeartsoarTower {
                     System.out.println(player.getLocation().getDesc());
                 }
             }
+        }
+        else {
+            System.out.println("Invalid Command. Please try another way.");
         }
     }
 
@@ -106,7 +111,11 @@ class HeartsoarTower {
         }
 
         if (foundItem != null) {
-            System.out.println(foundItem.getDescription());
+            if (foundItem.getName().equalsIgnoreCase("Sword")) {
+                System.out.println("It is a shiny sword, adorned with intricate carvings.");
+            } else {
+                System.out.println(foundItem.getDescription());
+            }
         } else {
             System.out.println("You don't see that item here.");
         }
