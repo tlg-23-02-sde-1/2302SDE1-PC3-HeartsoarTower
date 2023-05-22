@@ -2,8 +2,9 @@ package com.tlg.heartsoar;
 
 import com.tlg.art.TitleScreen;
 import com.tlg.language.TextParser;
-
 import java.io.*;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -16,13 +17,12 @@ class HeartsoarTower {
     private TreeMap<String, ArrayList<String>> NOUNS = factory.getNouns();
     private TextParser textParser = new TextParser(VERBS, NOUNS);
     private Player player;
+    private Scene scene;
 
 
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
     }
-
-
 
     void gameLoop() {
         boolean isRunning = true;
@@ -43,21 +43,22 @@ class HeartsoarTower {
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
         if (instruct == null) {
             System.out.println("Invalid Command.");
+            return;
         }
-        if (instruct[0].equalsIgnoreCase("quit")) {
+        else if (instruct[0].equalsIgnoreCase("quit")) {
             quitGame();
         }
-        if (instruct[0].equalsIgnoreCase("help")) {
-//                TODO: Add help function
+        else if (instruct[0].equalsIgnoreCase("help")) {
+            help();
         }
-        if (instruct[1].equalsIgnoreCase("inventory")) {
-//                TODO: Display Inventory
+        else if (instruct[0].equalsIgnoreCase("inventory")) {
+            System.out.println(player.getInventory());
         }
-        if (instruct[1].equals("look") && instruct[0] != null) {
-//                TODO: Look at item
+        else if (instruct[0].equals("look") && instruct.length > 1) {
+            lookAtItem(instruct[1]);
         }
-        if (instruct[0].equals("go") && instruct[1] != null) {
-            HashMap acceptableDirections = player.getLocation().getNeighborRooms();
+        else if (instruct[0].equals("go") && instruct.length > 1) {
+            HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
             if (!acceptableDirections.containsKey(instruct[1])) {
                 System.out.println("You cannot go that way.");
                 return;
@@ -75,6 +76,38 @@ class HeartsoarTower {
                     System.out.println(player.getLocation().getDesc());
                 }
             }
+        }
+    }
+
+    private void help() {
+        System.out.println("You can use the following commands:");
+        System.out.println("go <direction>");
+        System.out.println("look <item>");
+        System.out.println("inventory");
+        System.out.println("quit");
+    }
+
+    private void lookAtItem(String item) {
+        Item foundItem = null;
+        for (Item sceneItem : player.getLocation().getItems()) {
+            if (sceneItem.getName().equalsIgnoreCase(item)) {
+                foundItem = sceneItem;
+                break;
+            }
+        }
+        if (foundItem == null) {
+            for (Item inventoryItem : player.getInventory()) {
+                if (inventoryItem.getName().equalsIgnoreCase(item)) {
+                    foundItem = inventoryItem;
+                    break;
+                }
+            }
+        }
+
+        if (foundItem != null) {
+            System.out.println(foundItem.getDescription());
+        } else {
+            System.out.println("You don't see that item here.");
         }
     }
 
@@ -119,14 +152,12 @@ class HeartsoarTower {
         }
         if ("Y".equalsIgnoreCase(userInput) || "Yes".equalsIgnoreCase(userInput)) {
             System.out.println("Quitting the game. Goodbye!");
-            System.exit(0);
+            return false;
         } else {
             System.out.println("Returning to the start..");
-            return false;
+            return true;
         }
-        return true;
     }
-
 
     public static void main(String[] args) throws IOException {
         HeartsoarTower game = new HeartsoarTower();
