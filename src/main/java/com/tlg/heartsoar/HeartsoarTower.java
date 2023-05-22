@@ -18,14 +18,15 @@ class HeartsoarTower {
     private TextParser textParser = new TextParser(VERBS, NOUNS);
     private Player player;
     private Scene scene;
-
+    private boolean isRunning;
 
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
+        this.isRunning = true;
     }
 
     void gameLoop() {
-        boolean isRunning = true;
+
         TitleScreen.displayTitleScreen();
         newGame();
         basicInfo();
@@ -152,11 +153,12 @@ class HeartsoarTower {
         }
         if ("Y".equalsIgnoreCase(userInput) || "Yes".equalsIgnoreCase(userInput)) {
             System.out.println("Quitting the game. Goodbye!");
-            return false;
+            System.exit(0);
         } else {
             System.out.println("Returning to the start..");
             return true;
         }
+        return true;
     }
 
     public static void main(String[] args) throws IOException {
