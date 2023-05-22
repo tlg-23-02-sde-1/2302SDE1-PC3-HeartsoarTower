@@ -58,5 +58,9 @@ class Room {
     public void setDiscovered(boolean discovered) {
         isDiscovered = discovered;
     }
+
+    public Item[] getItems() {
+        return null;
+    }
 }
 

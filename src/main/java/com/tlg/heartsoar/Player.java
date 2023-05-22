@@ -11,8 +11,6 @@ class Player {
     private Map map;
 
 
-
-
     Player(List<Room> rooms) {
 //        Set the location with the name Entrance
         for (Room room : rooms){
@@ -38,4 +36,9 @@ class Player {
     public void setPrevLocation(Room prevLocation) {
         this.prevLocation = prevLocation;
     }
+
+    public List<Item> getInventory() {
+        return inventory;
+    }
+
 }
