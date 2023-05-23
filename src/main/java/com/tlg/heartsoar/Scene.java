@@ -1,32 +1,50 @@
 package com.tlg.heartsoar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Scene {
-    private String name;
+    private Room room;
     private String description;
-    private String[] items;
-    private String[] monsters;
+    private List<Item> sceneItems = new ArrayList<>();
+    private List<Monster> sceneMonsters = new ArrayList<>();
 
-
-    Scene(String name, String description, String[] items, String[] monsters) {
-        this.name = name;
-        this.description = description;
-        this.items = items;
-        this.monsters = monsters;
+    Scene(SceneBuilder sceneBuilder, List<Room> rooms, List<Item> items, List<Monster> monsters) {
+//        Associate the room with the correct room:
+        for (Room r : rooms){
+            if (r.getName().equalsIgnoreCase(sceneBuilder.getRoom()))    this.room = r;
+        }
+        for (Item i : items) {
+            for(String j : sceneBuilder.getItems()){
+                if (i.getName().equalsIgnoreCase(j)) addItem(i);
+            }
+        }
+        for (Monster i : sceneMonsters) {
+            for(String j : sceneBuilder.getMonsters()){
+                if (i.getName().equalsIgnoreCase(j)) addMonster(i);
+            }
+        }
     }
 
-    String getName() {
-        return name;
+    public Room getRoom(){
+        return this.room;
     }
-
     String getDescription() {
         return description;
     }
-
-    String[] getItems() {
-        return items;
+    List<Item> getSceneItems() {
+        return sceneItems;
     }
-
-    String[] getMonsters() {
-        return monsters;
+    public void removeItem(Item e){
+        sceneItems.remove(e);
+    }
+    public void addItem(Item e){
+        sceneItems.add(e);
+    }
+    List<Monster> getSceneMonsters() {
+        return sceneMonsters;
+    }
+    public  void addMonster(Monster e){
+        sceneMonsters.add(e);
     }
 }

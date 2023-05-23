@@ -41,5 +41,11 @@
   ],
   "quit": [
     "quit"
+  ],
+  "help": [
+    "help"
+  ],
+  "get" : [
+    "get"
   ]
 }

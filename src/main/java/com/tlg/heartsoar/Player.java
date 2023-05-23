@@ -41,4 +41,11 @@ class Player {
         return inventory;
     }
 
+    public void roomItemFromInventory(Item e){
+        inventory.remove(e);
+    }
+    public void addItemToInventory(Item e){
+        inventory.add(e);
+    }
+
 }
