@@ -46,5 +46,8 @@ class Player {
     public void addItemToInventory(Item e){
         inventory.add(e);
     }
+    public void removeItemFromInventory(Item e){
+        inventory.remove(e);
+    }
 
 }

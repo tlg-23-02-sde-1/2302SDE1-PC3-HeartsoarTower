@@ -49,5 +49,6 @@
   "help": [
     "help"
   ],
-  "get" : ["get"]
+  "get" : ["get"],
+  "drop": ["drop"]
 }
