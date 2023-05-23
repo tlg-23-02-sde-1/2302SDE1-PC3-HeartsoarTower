@@ -34,7 +34,7 @@ local.properties
 ## - build output
 /build/
 build
-build.gradle
+
 
 
 ### Maven ###
