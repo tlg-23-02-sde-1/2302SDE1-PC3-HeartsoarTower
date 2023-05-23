@@ -69,9 +69,10 @@ class HeartsoarTower {
         }
         else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
             lookAtSword();
-        } else if (instruct[0].equalsIgnoreCase("look")) {
+        }
+        else if (instruct[0].equalsIgnoreCase("look")) {
             System.out.println("You look around the room.");
-            lookAtItem(instruct[1]);
+            lookAround();
         }
         else if (instruct[0].equalsIgnoreCase("go")) {
             HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
@@ -167,6 +168,10 @@ class HeartsoarTower {
         System.out.println("What do you want to do next?");
     }
 
+    private void lookAround() {
+        System.out.println("You look around the room.");
+        System.out.println(player.getLocation().getDesc());
+    }
 
     void newGame() {
         Scanner inputScanner = new Scanner(System.in);
