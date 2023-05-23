@@ -56,7 +56,9 @@ class HeartsoarTower {
             System.out.println("You have the following items in your inventory:");
             System.out.println(player.getInventory());
         }
-        else if (instruct[0].equalsIgnoreCase("look")) {
+        else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
+            lookAtSword();
+        } else if (instruct[0].equalsIgnoreCase("look")) {
             System.out.println("You look around the room.");
             lookAtItem(instruct[1]);
         }
@@ -89,7 +91,7 @@ class HeartsoarTower {
         System.out.println("You can use the following commands:");
         System.out.println("go <direction>");
         System.out.println("look <item>");
-        System.out.println("inventory");
+        System.out.println("check inventory");
         System.out.println("quit");
     }
 
@@ -109,9 +111,8 @@ class HeartsoarTower {
                 }
             }
         }
-
         if (foundItem != null) {
-            System.out.println(foundItem.getDescription());
+            // TODO: Remove sword and replace with a more generic item
             if (foundItem.getName().equalsIgnoreCase("Sword")) {
                 System.out.println("It is a shiny sword, adorned with intricate carvings.");
             } else {
@@ -121,6 +122,11 @@ class HeartsoarTower {
             System.out.println("You don't see that item here.");
         }
     }
+    private void lookAtSword() {
+        System.out.println("It is a shiny sword, adorned with intricate carvings.");
+        System.out.println("What do you want to do next?");
+    }
+
 
     void newGame() {
         Scanner inputScanner = new Scanner(System.in);

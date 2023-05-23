@@ -43,7 +43,8 @@
     "quit"
   ],
   "look": [
-    "look"
+    "look",
+    "check",
   ],
   "help": [
     "help"
