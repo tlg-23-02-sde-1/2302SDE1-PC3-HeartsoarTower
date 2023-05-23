@@ -58,7 +58,7 @@ class Factory {
 //    }
 
     public void populateRooms() throws IOException {
-        try(InputStream is = getClass().getResourceAsStream(ROOMS_PATH);
+        try(InputStream is = getClass().getClassLoader().getResourceAsStream(ROOMS_PATH);
             Reader rdr = new InputStreamReader(is);
         ) {
             rooms = gson.fromJson(rdr, new TypeToken<List<Room>>(){}.getType());
