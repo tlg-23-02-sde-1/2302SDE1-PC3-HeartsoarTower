@@ -1,6 +1,0 @@
-{
-  "name" : "Sandwich",
-  "description" : " French bread with black forest ham and swiss cheese.",
-  "onUse" : "You make the sandwich and hand it to the werewolf and devours it in one bite. He thanks you and gives you a huge smile.",
-  "isStorable" : true
-}
