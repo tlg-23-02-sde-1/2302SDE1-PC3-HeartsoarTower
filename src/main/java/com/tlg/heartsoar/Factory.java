@@ -22,6 +22,7 @@ class Factory {
     private List<Room> rooms = new ArrayList<>();
     private List<Monster> monsters = new ArrayList<>();
     private List<Item> items = new ArrayList<>();
+    private List<Scene> scenes = new ArrayList<>();
 
     GsonBuilder builder = new GsonBuilder();
     Gson gson = builder.create();
@@ -31,6 +32,7 @@ class Factory {
     Path roomFolder = Paths.get(basePath+"Rooms");
     Path monsterFolder = Paths.get(basePath+"Monsters");
     Path itemFolder = Paths.get(basePath+"Items");
+    Path sceneFolder = Paths.get(basePath + "Scenes");
 
 //    public <E> void populate(List<E> listBuilder, Path folder, Object subject) throws IOException {
 //        try {
@@ -115,12 +117,30 @@ class Factory {
 
     }
 
+    public void populateScenes() throws IOException {
+        try {
+            DirectoryStream<Path> sceneStream = Files.newDirectoryStream(sceneFolder);
+            for (Path el : sceneStream) {
+                JsonElement jsonElement = gson.fromJson(Files.newBufferedReader(el), JsonElement.class);
+                SceneBuilder sceneBuilder = gson.fromJson(jsonElement, SceneBuilder.class);
+                Scene scene = new Scene(sceneBuilder, rooms, items, monsters);
+                scenes.add(scene);
+
+
+            }
+            ;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Factory() throws IOException {
         populateRooms();
         populateItems();
         populateMonsters();
         populateVerbs();
         populateNouns();
+        populateScenes();
     }
     public List<Room> getRooms() {
         return rooms;
@@ -138,5 +158,9 @@ class Factory {
 
     public List<Item> getItems() {
         return items;
+    }
+
+    public List<Scene> getScenes() {
+        return scenes;
     }
 }

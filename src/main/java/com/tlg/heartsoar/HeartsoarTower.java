@@ -19,6 +19,7 @@ class HeartsoarTower {
     private Player player;
     private Scene scene;
     private boolean isRunning;
+    private List<Scene> scenes = factory.getScenes();
 
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
@@ -32,25 +33,35 @@ class HeartsoarTower {
         basicInfo();
 
         while (isRunning) {
+            grabScene();
             System.out.println("Enter a command:");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             String [] instruct = textParser.validCombo(input);
-            alwaysAvailableCommands(instruct);
+            Boolean actionTaken = alwaysAvailableCommands(instruct);
+            if (!actionTaken) specificCommands(instruct);
+        }
+    }
+    private void grabScene() {
+        for (Scene scene : scenes) {
+            if (scene.getRoom().equals(player.getLocation())) {
+                this.scene = scene;
+            }
         }
     }
 
-    private void alwaysAvailableCommands(String[] instruct) {
+    private Boolean alwaysAvailableCommands(String[] instruct) {
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
         if (instruct == null) {
             System.out.println("Invalid Command.");
-            return;
+            return false;
         }
         else if (instruct[0].equalsIgnoreCase("quit")) {
             quitGame();
         }
         else if (instruct[0].equalsIgnoreCase("help")) {
             help();
+            return true;
         }
         else if (instruct[1].equalsIgnoreCase("inventory")) {
             System.out.println("You have the following items in your inventory:");
@@ -66,7 +77,7 @@ class HeartsoarTower {
             HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
             if (!acceptableDirections.containsKey(instruct[1])) {
                 System.out.println("You cannot go that way.");
-                return;
+                return true;
             }
 //                TODO Step2: Ensure the monster will allow you to flee
             player.setPrevLocation(player.getLocation());
@@ -79,11 +90,31 @@ class HeartsoarTower {
                     player.setLocation(nextRoom);
                     System.out.println("You have entered the " + player.getLocation().getName() + ".");
                     System.out.println(player.getLocation().getDesc());
+                    return true;
                 }
             }
         }
-        else {
-            System.out.println("Invalid Command. Please try another way.");
+//        else {
+//            System.out.println("Invalid Command. Please try another way.");
+//        }
+            return false;
+    }
+
+    private void specificCommands(String[] instruct) {
+//        Get item:
+        if (instruct[0].equalsIgnoreCase("get")) {
+//            Check to see if the item is in the room:
+
+            for (Item item : scene.getSceneItems()) {
+                if (item.getName().equalsIgnoreCase(instruct[1])) {
+//                    Add to our inventory:
+                    player.addItemToInventory(item);
+//                    Remove from the scene:
+                    scene.removeItem(item);
+                    return;
+                }
+            }
+            System.out.println("I cannot get that item.");
         }
     }
 

@@ -44,9 +44,10 @@
   ],
   "look": [
     "look",
-    "check",
+    "check"
   ],
   "help": [
     "help"
-  ]
+  ],
+  "get" : ["get"]
 }
