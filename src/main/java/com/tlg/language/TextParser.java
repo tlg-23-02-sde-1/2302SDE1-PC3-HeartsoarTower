@@ -22,8 +22,8 @@ public class TextParser {
         String noun = null;
 
 //        Split input into words.  Strip out punctuation. Convert to lower case.
-        input = input.replaceAll("[^a-zA-Z ]", "").toLowerCase();
-        String[] words = input.split(" ");
+        input = input.replaceAll("\\W+", " ").toLowerCase().strip();
+        String[] words = input.split("\\s+");
 //        Check each word in words to see if it is a verb or noun.
         for (String word : words) {
             for (Map.Entry<String, ArrayList<String>> entry : VERBS.entrySet()) {

@@ -4,9 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.reflect.TypeToken;
 import com.tlg.language.TextParser;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,6 +34,7 @@ class Factory {
     //    Read from entire JSON folder
     final String basePath = "src/main/resources/";
     Path roomFolder = Paths.get(basePath+"Rooms");
+    private static final String ROOMS_PATH = "Rooms/rooms.json";
     Path monsterFolder = Paths.get(basePath+"Monsters");
     Path itemFolder = Paths.get(basePath+"Items");
     Path sceneFolder = Paths.get(basePath + "Scenes");
@@ -53,13 +58,16 @@ class Factory {
 //    }
 
     public void populateRooms() throws IOException {
-        try {
-            DirectoryStream<Path> roomStream = Files.newDirectoryStream(roomFolder);
-            for (Path el : roomStream) {
-                JsonElement jsonElement = gson.fromJson(Files.newBufferedReader(el), JsonElement.class);
-                Room room = gson.fromJson(jsonElement, Room.class);
-                rooms.add(room);
-            }
+        try(InputStream is = getClass().getResourceAsStream(ROOMS_PATH);
+            Reader rdr = new InputStreamReader(is);
+        ) {
+            rooms = gson.fromJson(rdr, new TypeToken<List<Room>>(){}.getType());
+//            DirectoryStream<Path> roomStream = Files.newDirectoryStream(roomFolder);
+//            for (Path el : roomStream) {
+//                JsonElement jsonElement = gson.fromJson(Files.newBufferedReader(el), JsonElement.class);
+//                Room room = gson.fromJson(jsonElement, Room.class);
+//                rooms.add(room);
+//            }
             ;
         } catch (IOException e) {
             e.printStackTrace();
