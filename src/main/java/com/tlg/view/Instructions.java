@@ -1,4 +1,4 @@
-package com.tlg.art;
+package com.tlg.view;
 
 class Instructions {
 

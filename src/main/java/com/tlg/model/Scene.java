@@ -1,9 +1,10 @@
-package com.tlg.heartsoar;
+package com.tlg.model;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Scene {
+public class Scene {
     private Room room;
     private String description;
     private List<Item> sceneItems = new ArrayList<>();
@@ -32,7 +33,7 @@ class Scene {
     String getDescription() {
         return description;
     }
-    List<Item> getSceneItems() {
+    public List<Item> getSceneItems() {
         return sceneItems;
     }
     public void removeItem(Item e){

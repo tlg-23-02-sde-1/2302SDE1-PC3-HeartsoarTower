@@ -1,4 +1,4 @@
-package com.tlg.heartsoar;
+package com.tlg.model;
 
 import java.util.List;
 
