@@ -4,6 +4,10 @@ import com.tlg.model.Item;
 import com.tlg.model.Player;
 import com.tlg.model.Scene;
 
+
+/**
+ * Handles commands that need awareness of model state.
+ */
 class SpecificCommands {
     protected static void specificCommands(String[] instruct, Player player, Scene scene) {
 //        Get item:

@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
+
+/**
+ * AlwaysCommands are commands that are available to the player regardless of the location
+ */
 class AlwaysCommands {
     protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms){
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
