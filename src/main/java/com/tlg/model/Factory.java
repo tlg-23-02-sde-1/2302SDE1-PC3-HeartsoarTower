@@ -2,18 +2,12 @@ package com.tlg.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
-import com.tlg.controller.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
@@ -92,11 +86,17 @@ public class Factory {
         try(InputStream is = getClass().getClassLoader().getResourceAsStream(SCENES_PATH);
             Reader rdr = new InputStreamReader(is);
         ) {
-            scenes = gson.fromJson(rdr, new TypeToken<List<Scene>>(){}.getType());
+            List<SceneBuilder> sceneBuilder = gson.fromJson(rdr, new TypeToken<List<SceneBuilder>>(){}.getType());
+            for (SceneBuilder e : sceneBuilder){
+                Scene scene = new Scene(e, rooms, items, monsters);
+                scenes.add(scene);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 
     public void populateVerbs() throws IOException {
         try(InputStream is = getClass().getClassLoader().getResourceAsStream(VERBS_PATH);
