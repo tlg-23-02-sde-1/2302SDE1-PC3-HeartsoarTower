@@ -44,7 +44,7 @@ class SpecificCommands {
         }
         else if (instruct[0].equalsIgnoreCase("talk")) {
             // iterate over the monsters in the scene
-            for (Monster monster : scene.getSceneMonsters()) {
+            for (Monster monster : scene.getAllSceneMonsters()) {
                 // if the monster name matches the second word in the command,
                 if (monster.getName().equalsIgnoreCase(instruct[1])) {
                     // print the dialogue returned by the monster's talk() method
