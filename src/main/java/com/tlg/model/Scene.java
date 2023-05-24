@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Scene {
     private Room room;
-    private String description;
+    private String[] description = new String[3];
     private List<Item> sceneItems = new ArrayList<>();
     private List<Monster> sceneMonsters = new ArrayList<>();
 
@@ -20,17 +20,18 @@ public class Scene {
                 if (i.getName().equalsIgnoreCase(j)) addItem(i);
             }
         }
-        for (Monster i : sceneMonsters) {
+        for (Monster i : monsters) {
             for(String j : sceneBuilder.getMonsters()){
                 if (i.getName().equalsIgnoreCase(j)) addMonster(i);
             }
         }
+        this.description = sceneBuilder.getDescription();
     }
 
     public Room getRoom(){
         return this.room;
     }
-    String getDescription() {
+    public String[] getDescription() {
         return description;
     }
     public List<Item> getSceneItems() {
