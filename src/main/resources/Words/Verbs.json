@@ -50,5 +50,22 @@
     "help"
   ],
   "get" : ["get"],
-  "drop": ["drop"]
+  "drop": ["drop"],
+  "yell" : [
+    "scream"
+  ],
+  "cry" : ["cry"],
+  "hide" : ["hide"],
+  "attack" : [
+    "attack",
+    "fight",
+    "kill",
+    "hit",
+    "punch",
+    "kick",
+    "slap",
+    "bite",
+    "scratch"
+  ]
+
 }

@@ -3,9 +3,15 @@
     "name" : "ghost",
 
     "successes" : [
-      "talk ghost",
-      "use handkerchief"
-    ],
+        [
+        "talk",
+        "ghost"
+        ],
+        [
+        "use",
+        "handkerchief"
+        ]
+      ],
 
     "failures" : [
       "run",
@@ -21,7 +27,8 @@
       "slap",
       "bite",
       "scratch",
-      "sword"
+      "sword",
+      "go"
     ],
 
     "dialogue" : [
@@ -30,7 +37,7 @@
       "Sobbing..."
     ],
 
-    "desc" : [
+    "description" : [
       "You talk to the ghost.  He just wants to be seen.  His crying is getting the floor wet.  If only you had something to give him to dry his tears...",
       "You use the handkerchief to dry the ghost's tears.  He thanks you and grows so small that he shrinks to the size of a pocket watch and asks to come with you.  You can now go through the door to the right."
     ],

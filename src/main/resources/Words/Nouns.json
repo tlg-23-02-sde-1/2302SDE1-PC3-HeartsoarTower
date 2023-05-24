@@ -59,5 +59,14 @@
   "gun": ["gun"],
   "inventory": ["inventory"],
   "casper" : ["casper"],
-  "around" : ["around"]
+  "around" : ["around"],
+  "handkerchief" : [
+    "handkerchief",
+    "handkerchiefs",
+    "hanky",
+    "hankies",
+    "hankie",
+    "hankys",
+    "hankerchief"
+  ]
 }

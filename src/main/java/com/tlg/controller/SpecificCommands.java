@@ -13,6 +13,10 @@ class SpecificCommands {
 //        Get item:
         if (instruct[0].equalsIgnoreCase("get")) {
 //            Check to see if the item is in the room:
+            if (scene.getSceneItems().size() == 0) {
+                System.out.println("There is nothing to get.");
+                return true;
+            }
             for (Item item : scene.getSceneItems()) {
                 if (item.getName().equalsIgnoreCase(instruct[1])) {
 //                    Add to our inventory:
@@ -20,6 +24,7 @@ class SpecificCommands {
                     System.out.println("You picked up the " + item.getName() + " and added to your inventory.");
 //                    Remove from the scene:
                     scene.removeItem(item);
+                    return true;
                 }
             }
             System.out.println("I cannot get that item.");
