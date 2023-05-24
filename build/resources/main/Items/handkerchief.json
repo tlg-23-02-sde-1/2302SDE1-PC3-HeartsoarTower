@@ -1,6 +1,0 @@
-{
-  "name" : "Handkerchief",
-  "description" : " Slightly faded color with a soft, worn texture. Its edges intricately adorned with delicate lacework, showcasing the artistry of the past.",
-  "onUse" : "Hand to new friend a folded handkerchief, symbolizing friendship.",
-  "isStorable" : true
-}

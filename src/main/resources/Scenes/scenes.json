@@ -1,0 +1,12 @@
+[
+  {
+    "room"     : "entrance",
+    "description"     : [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "items"    : ["Casper"],
+    "monsters" : ["ghost"]
+  }
+]

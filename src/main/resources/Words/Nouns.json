@@ -56,5 +56,8 @@
   "timore": ["timore"],
   "tim": ["tim"],
   "nazi": ["nazi"],
-  "gun": ["gun"]
+  "gun": ["gun"],
+  "inventory": ["inventory"],
+  "casper" : ["casper"],
+  "around" : ["around"]
 }
