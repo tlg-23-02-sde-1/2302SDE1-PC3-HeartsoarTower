@@ -43,7 +43,7 @@ public class Scene {
     public void addItem(Item e){
         sceneItems.add(e);
     }
-    List<Monster> getSceneMonsters() {
+    public List<Monster> getSceneMonsters() {
         return sceneMonsters;
     }
     public  void addMonster(Monster e){
