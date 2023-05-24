@@ -1,9 +1,11 @@
-package com.tlg.heartsoar;
+package com.tlg.model;
+
+import com.tlg.model.Item;
 
 import java.util.HashMap;
 import java.util.List;
 
-class Room {
+public class Room {
     private final String name;
     private String[] desc = new String[3];
 //    desc[0] = Monster Present Item Present

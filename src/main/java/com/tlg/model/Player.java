@@ -1,9 +1,11 @@
-package com.tlg.heartsoar;
+package com.tlg.model;
+
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-class Player {
+public class Player {
     private String name = "Harmony";
     private Room location;
     private Room prevLocation;
@@ -11,7 +13,7 @@ class Player {
     private Map map;
 
 
-    Player(List<Room> rooms) {
+    public Player(List<Room> rooms) {
 //        Set the location with the name Entrance
         for (Room room : rooms){
             if (room.getName().equals("Entrance")){

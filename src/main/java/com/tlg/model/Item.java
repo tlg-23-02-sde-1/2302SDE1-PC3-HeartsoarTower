@@ -1,6 +1,6 @@
-package com.tlg.heartsoar;
+package com.tlg.model;
 
-class Item {
+public class Item {
     private String name;
     private String description;
     private String onUse;

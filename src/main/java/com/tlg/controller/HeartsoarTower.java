@@ -1,11 +1,10 @@
-package com.tlg.heartsoar;
+package com.tlg.controller;
 
-import com.tlg.art.TitleScreen;
-import com.tlg.language.TextParser;
-import java.io.*;
+import com.tlg.model.*;
+import com.tlg.view.TitleScreen;
+
 import java.io.IOException;
 import java.util.ArrayList;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 class HeartsoarTower {
