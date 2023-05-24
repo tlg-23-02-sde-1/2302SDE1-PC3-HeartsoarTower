@@ -1,6 +1,7 @@
 package com.tlg.controller;
 
 import com.tlg.model.Item;
+import com.tlg.model.Monster;
 import com.tlg.model.Player;
 import com.tlg.model.Scene;
 
@@ -25,10 +26,12 @@ class SpecificCommands {
 //                    Remove from the scene:
                     scene.removeItem(item);
                     return true;
+
                 }
             }
             System.out.println("I cannot get that item.");
             return true;
+
         } else if (instruct[0].equalsIgnoreCase("drop")) {
 //            Check to see if the item is in the inventory:
             for (Item item : player.getInventory()) {
@@ -38,6 +41,19 @@ class SpecificCommands {
                     return true;
                 }
             }
+        }
+        else if (instruct[0].equalsIgnoreCase("talk")) {
+            // iterate over the monsters in the scene
+            for (Monster monster : scene.getSceneMonsters()) {
+                // if the monster name matches the second word in the command,
+                if (monster.getName().equalsIgnoreCase(instruct[1])) {
+                    // print the dialogue returned by the monster's talk() method
+                    System.out.println(monster.getName() + ": " + monster.talk());
+                    return true;
+                }
+            }
+            System.out.println("There is no monster by that name here.");
+            return true;
         }
         return false;
     }

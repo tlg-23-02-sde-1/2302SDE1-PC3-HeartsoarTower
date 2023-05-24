@@ -47,6 +47,7 @@ public class Scene {
         return sceneMonsters.get(i);
     }
     public List<Monster> getAllSceneMonsters() {
+
         return sceneMonsters;
     }
     public  void addMonster(Monster e){
