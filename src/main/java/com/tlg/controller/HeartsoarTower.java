@@ -40,7 +40,12 @@ class HeartsoarTower {
             String input = scanner.nextLine();
             String [] instruct = textParser.validCombo(input);
             Boolean actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
-            if (!actionTaken) specificCommands(instruct, player, scene);
+            if (!actionTaken) {
+                actionTaken = specificCommands(instruct, player, scene);
+            }
+            if (!actionTaken) {
+                System.out.println("Invalid Command.");
+            }
         }
     }
     private void grabScene() {
