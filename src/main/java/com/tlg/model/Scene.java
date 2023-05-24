@@ -31,8 +31,8 @@ public class Scene {
     public Room getRoom(){
         return this.room;
     }
-    public String[] getDescription() {
-        return description;
+    public String getDescription(int i) {
+        return description[i];
     }
     public List<Item> getSceneItems() {
         return sceneItems;
@@ -43,10 +43,18 @@ public class Scene {
     public void addItem(Item e){
         sceneItems.add(e);
     }
-    public List<Monster> getSceneMonsters() {
+    public Monster getSceneMonsters(int i) {
+        return sceneMonsters.get(i);
+    }
+    public List<Monster> getAllSceneMonsters() {
+
         return sceneMonsters;
     }
     public  void addMonster(Monster e){
         sceneMonsters.add(e);
+    }
+    public void defeatMonster(Monster e){
+//        TODO: MAYBE ADD THE DEFEAT INFO
+        sceneMonsters.remove(e);
     }
 }

@@ -57,7 +57,6 @@ class AlwaysCommands {
                     nextRoom = room;
                     player.setLocation(nextRoom);
                     System.out.println("You have entered the " + player.getLocation().getName() + ".");
-                    System.out.println(scene.getDescription());
                     return true;
                 }
             }

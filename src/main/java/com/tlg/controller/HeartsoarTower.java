@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.*;
 
 import static com.tlg.controller.AlwaysCommands.alwaysAvailableCommands;
+import static com.tlg.controller.CombatEngine.combatCommands;
 import static com.tlg.controller.NewGame.newGame;
 import static com.tlg.controller.SpecificCommands.specificCommands;
 
@@ -39,13 +40,12 @@ class HeartsoarTower {
             System.out.println("Enter a command:");
             String input = scanner.nextLine();
             String [] instruct = textParser.validCombo(input);
-            Boolean actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
-            if (!actionTaken) {
-                actionTaken = specificCommands(instruct, player, scene);
-            }
-            if (!actionTaken) {
-                System.out.println("Invalid Command.");
-            }
+            Boolean actionTaken = false;
+            if (scene.getAllSceneMonsters().size() != 0) actionTaken = combatCommands(instruct, player, scene);
+            if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
+            if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
+            if (!actionTaken) actionTaken = specificCommands(instruct, player, scene);
+            if (!actionTaken) System.out.println("Invalid Command.");
         }
     }
     private void grabScene() {
@@ -54,6 +54,17 @@ class HeartsoarTower {
                 this.scene = scene;
             }
         }
+//        Print the description based on if the monster is present (0), if an item is present(1), or if complete(3)
+        if (scene.getAllSceneMonsters().size() != 0) {
+            System.out.println(scene.getDescription(0));
+        }
+        else if (scene.getSceneItems().size() != 0) {
+            System.out.println(scene.getDescription(1));
+        }
+        else {
+            System.out.println(scene.getDescription(2));
+        }
+
     }
     public static void main(String[] args) throws IOException {
         HeartsoarTower game = new HeartsoarTower();
