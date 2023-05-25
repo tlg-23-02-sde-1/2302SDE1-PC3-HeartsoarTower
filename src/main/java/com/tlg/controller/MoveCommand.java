@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 class MoveCommand {
-public static boolean moveCommands(String[] instruct, Player player, Scene scene, List<Room> rooms) {
+public static boolean moveCommands(String[] instruct, Player player, Scene scene, List<Room> rooms, DisplayEngine displayEngine) {
         boolean actionTaken = false;
         if (instruct[0].equalsIgnoreCase("go")) {
         HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
@@ -30,6 +30,11 @@ public static boolean moveCommands(String[] instruct, Player player, Scene scene
                 nextRoom = room;
                 player.setLocation(nextRoom);
                 System.out.println("You have entered the " + player.getLocation().getName() + ".");
+                if (!room.isDiscovered()){
+                    room.setDiscovered(true);
+
+
+                }
                 return true;
             }
         }

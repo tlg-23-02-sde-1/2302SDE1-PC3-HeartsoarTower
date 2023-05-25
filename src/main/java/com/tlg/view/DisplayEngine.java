@@ -1,5 +1,10 @@
 package com.tlg.view;
 
+import com.tlg.controller.MapBuilder;
+import com.tlg.model.Room;
+
+import java.util.List;
+
 public class DisplayEngine {
     // Split the screen in thirds:
 //    1. Top third is the art display. ( or map )
@@ -8,20 +13,31 @@ public class DisplayEngine {
     private DisplayArt artDisplay;
     private DisplayText textDisplay;
     private DisplayInput displayInput;
+    private MapBuilder mapBuilder;
     private static String lineBreak = "------------------------------------------------------------------------------------------------------------------------";
 
 
 
-    public static void printScreen(DisplayArt artDisplay, DisplayText textDisplay, DisplayInput inputDisplay) {
-//        Clear the screen.
+    public static void printScreen(DisplayArt artDisplay, DisplayText textDisplay, DisplayInput inputDisplay, List<Room> rooms) {
         System.out.print("\033[H\033[2J");
-        System.out.println(artDisplay.getDisplay());
+        System.out.println(printMapAndArt(artDisplay, rooms));
         System.out.println(lineBreak);
         System.out.println(textDisplay.getDisplay());
         System.out.println(lineBreak);
         System.out.println(inputDisplay.getDisplay());
     }
 
+    public static String printMapAndArt(DisplayArt artDisplay, List<Room> rooms) {
+        String map = MapUI.getMap(rooms);
+        String art = artDisplay.getDisplay();
+        String[] mapLines = map.split("\n");
+        String[] artLines = art.split("\n");
+        String[] output = new String[mapLines.length];
+        for (int i = 0; i < mapLines.length; i++) {
+            output[i] = mapLines[i] + " " + artLines[i];
+        }
+        return String.join("\n", output);
+    }
 
 
 

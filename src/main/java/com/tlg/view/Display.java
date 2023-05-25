@@ -1,7 +1,10 @@
 package com.tlg.view;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Display {
     public static int MAX_LINES;
@@ -12,13 +15,14 @@ class Display {
     }
 
 
-    public String getDisplay(String display) {
-        List<String> lines = new ArrayList<>();
-        lines = List.of(display.split("\r\n|\r|\n"));
+    public String trimDisplay(String display, int MAX_LINES) {
+        List<String> list = new ArrayList<String>();
+        list = Arrays.asList(display.split("\r\n|\r|\n"));
+        List<String> lines = Stream.of(display.split("\r\n|\r|\n")).collect(Collectors.toList());
         while(lines.size() < MAX_LINES) {
-            lines.add(0, "\n");
+            lines.add(0, " ");
             if (lines.size() < MAX_LINES) {
-                lines.add("\n");
+                lines.add(" ");
             }
         }
         StringBuilder sb = new StringBuilder();

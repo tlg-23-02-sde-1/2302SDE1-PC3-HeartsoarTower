@@ -2,6 +2,7 @@ package com.tlg.controller;
 
 import com.tlg.model.Monster;
 import com.tlg.model.Player;
+import com.tlg.model.Room;
 import com.tlg.model.Scene;
 import com.tlg.view.DisplayArt;
 import com.tlg.view.DisplayEngine;
@@ -12,7 +13,7 @@ import java.util.List;
 
 class CombatEngine {
 
-    public static boolean combatCommands(String[] instruct, Player player, Scene scene, DisplayArt art, DisplayText text, DisplayInput inputter, DisplayEngine displayEngine) {
+    public static boolean combatCommands(String[] instruct, Player player, Scene scene, DisplayArt art, DisplayText text, DisplayInput inputter, DisplayEngine displayEngine, List<Room> rooms) {
         boolean actionTaken = false;
 //        Verify there's even a monster in the room:
         if (scene.getSceneMonsters(0) == null) return actionTaken;
@@ -38,7 +39,7 @@ class CombatEngine {
             text.setDisplay(monster.getSceneFailed());
 //            TODO: RETURN TO SAVE POINT
         }
-        if (actionTaken) displayEngine.printScreen(art, text, inputter);
+        if (actionTaken) displayEngine.printScreen(art, text, inputter, rooms);
         return actionTaken;
     }
 }

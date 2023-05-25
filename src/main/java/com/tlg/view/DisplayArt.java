@@ -2,11 +2,8 @@ package com.tlg.view;
 
 import com.tlg.model.Monster;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class DisplayArt extends Display {
-    private final static int MAX_LINES = 10;
+    private final static int MAX_LINES = 30;
     private String display;
 
     public DisplayArt() {
@@ -18,12 +15,12 @@ public class DisplayArt extends Display {
         setDisplay(monster.getArt());
     }
 
-    public String getDisplay() {
-        return display;
+    public void setDisplay(String display) {
+        this.display = super.trimDisplay(display, MAX_LINES);
     }
 
-    public void setDisplay(String display) {
-        this.display = display;
+    public String getDisplay() {
+        return display;
     }
 
 }

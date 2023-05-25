@@ -52,16 +52,19 @@ class HeartsoarTower {
             String[] instruct = textParser.validCombo(input);
             Boolean actionTaken = false;
             if (scene.getAllSceneMonsters().size() != 0)
-                actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine);
+                actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine, rooms);
             if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
             if (!actionTaken) actionTaken = specificCommands(instruct, player, scene);
             if (!actionTaken) {
-                actionTaken = moveCommands(instruct, player, scene, rooms);
-                if (actionTaken) justEntered = true;
+                actionTaken = moveCommands(instruct, player, scene, rooms, displayEngine);
+                if (actionTaken) {
+                    justEntered = true;
+                    displayEngine.printScreen(art, text, inputter, rooms);
+                }
             }
             if (!actionTaken) {
                 text.setDisplay("I do not know that command.  Please try again:    ");
-                displayEngine.printScreen(art, text, inputter);
+                displayEngine.printScreen(art, text, inputter, rooms);
             }
         }
     }
@@ -78,7 +81,7 @@ class HeartsoarTower {
             art.setDisplay(monsterPicture);
             text.setDisplay(scene.getDescription(0));
             inputter.setDisplay("Enter a command:    ");
-            displayEngine.printScreen(art, text, inputter);
+            displayEngine.printScreen(art, text, inputter, rooms);
         }
         else if (scene.getSceneItems().size() != 0) {
             System.out.println(scene.getDescription(1));

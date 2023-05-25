@@ -39,5 +39,131 @@
       "left"  : "Entrance",
       "right" : "Kitchen"
     }
+  },
+  {
+    "name": "Kitchen",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Goblin",
+    "neighborRooms": {
+      "left": "Foyer"
+    }
+  },
+  {
+    "name": "Plaisure",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Succubus",
+    "neighborRooms": {
+      "down" : "Foyer",
+      "up"   : "Den"
+    }
+  },
+  {
+    "name": "Den",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Dire Bear",
+    "neighborRooms": {
+      "down" : "Plaisure",
+      "up"   : "Parlor"
+    }
+  },
+  {
+    "name": "Parlor",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Zombie",
+    "neighborRooms": {
+      "down" : "Den",
+      "up"   : "Ballroom",
+      "right": "Bed Chambers"
+    }
+  },
+  {
+    "name": "Bed Chambers",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Vampire",
+    "neighborRooms": {
+      "left" : "Parlor"
+    }
+  },
+  {
+    "name": "Ballroom",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Zombie",
+    "neighborRooms": {
+      "down" : "Parlor",
+      "up"   : "Conservatory"
+    }
+  },
+  {
+    "name": "Conservatory",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Alien",
+    "neighborRooms": {
+      "down" : "Ballroom",
+      "up"   : "Bedroom"
+    }
+  },
+  {
+    "name": "Bedroom",
+    "desc": [
+      "Description1",
+      "Description2",
+      "Description3"
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Prince",
+    "neighborRooms": {
+      "down" : "Conservatory"
+    }
   }
 ]
