@@ -40,27 +40,7 @@ class AlwaysCommands {
                 lookAround(player);
             }
         }
-        else if (instruct[0].equalsIgnoreCase("go")) {
-            HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
-            if (!acceptableDirections.containsKey(instruct[1])) {
-                System.out.println("You cannot go that way.");
-                return true;
-            }
-//                TODO Step2: Ensure the monster will allow you to flee
-            player.setPrevLocation(player.getLocation());
-            Room nextRoom;
-            String direction = instruct[1];
-            String roomDir = player.getLocation().getNeighborRooms().get(direction);
-//            TODO: Rework Rooms and Scene to transfer descriptions to scene
-            for (Room room : rooms) {
-                if (room.getName().equals(roomDir)) {
-                    nextRoom = room;
-                    player.setLocation(nextRoom);
-                    System.out.println("You have entered the " + player.getLocation().getName() + ".");
-                    return true;
-                }
-            }
-        }
+
 //        else {
 //            System.out.println("Invalid Command. Please try another way.");
 //        }

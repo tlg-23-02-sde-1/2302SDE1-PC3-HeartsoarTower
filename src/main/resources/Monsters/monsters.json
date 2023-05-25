@@ -41,9 +41,9 @@
       "You talk to the ghost.  He just wants to be seen.  His crying is getting the floor wet.  If only you had something to give him to dry his tears...",
       "You use the handkerchief to dry the ghost's tears.  He thanks you and grows so small that he shrinks to the size of a pocket watch and asks to come with you.  You can now go through the door to the right."
     ],
-
-    "sceneFailed" : "The ghost is not impressed by your actions.  He grows to the size of a house and eats you.  You are dead."
-  },
+    "sceneFailed" : "The ghost is not impressed by your actions.  He grows to the size of a house and eats you.  You are dead.",
+    "art" : "\n\n                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀\n                         '``\n",
+  }
 
   {
     "name": "zombie",
