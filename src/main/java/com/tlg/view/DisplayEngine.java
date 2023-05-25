@@ -1,6 +1,5 @@
 package com.tlg.view;
 
-import com.tlg.controller.MapBuilder;
 import com.tlg.model.Room;
 
 import java.util.List;
@@ -13,7 +12,6 @@ public class DisplayEngine {
     private DisplayArt artDisplay;
     private DisplayText textDisplay;
     private DisplayInput displayInput;
-    private MapBuilder mapBuilder;
     private static String lineBreak = "------------------------------------------------------------------------------------------------------------------------";
 
 

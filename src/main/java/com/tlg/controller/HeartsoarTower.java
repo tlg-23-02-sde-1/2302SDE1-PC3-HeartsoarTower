@@ -44,7 +44,7 @@ class HeartsoarTower {
 
         TitleScreen.displayTitleScreen();
         musicPlayer.setFilePath("src/main/resources/Music/medievalrpg-music.wav");
-        musicPlayer.play();
+//        musicPlayer.play();
         newGame();
         Scanner scanner = new Scanner(System.in);
         boolean justEntered = true;
@@ -88,6 +88,7 @@ class HeartsoarTower {
         }
         else if (scene.getSceneItems().size() != 0) {
             System.out.println(scene.getDescription(1));
+            String itemPicture = scene.getSceneItems().get(0).getArt();
         }
         else {
             System.out.println(scene.getDescription(2));

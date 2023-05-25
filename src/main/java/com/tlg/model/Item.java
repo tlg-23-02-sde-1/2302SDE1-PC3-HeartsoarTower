@@ -5,13 +5,15 @@ public class Item {
     private String description;
     private String onUse;
     private boolean isStorable;
+    private String art;
 
 
-    public Item(String name, String description, boolean isStorable, String onUse) {
+    public Item(String name, String description, boolean isStorable, String onUse, String art) {
         this.name = name;
         this.description = description;
         this.isStorable = isStorable;
         this.onUse = onUse;
+        this.art = art;
     }
 
     public String use(Room room) {
@@ -28,5 +30,9 @@ public class Item {
 
     public boolean isStorable() {
         return isStorable;
+    }
+
+    public String getArt() {
+        return art;
     }
 }
