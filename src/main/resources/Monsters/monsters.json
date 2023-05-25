@@ -42,8 +42,8 @@
       "You use the handkerchief to dry the ghost's tears.  He thanks you and grows so small that he shrinks to the size of a pocket watch and asks to come with you.  You can now go through the door to the right."
     ],
     "sceneFailed" : "The ghost is not impressed by your actions.  He grows to the size of a house and eats you.  You are dead.",
-    "art" : "\n\n                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀\n                         '``\n",
-  }
+    "art" : "                                        ,▄▄▄███████▄▄▄,\n                                    ▄▄████████████████████▄,\n                                 ,███████████████████████████▄,\n                               ▄████████████████████████████████\n                              ███████████████████████████████████▄\n                            ╓██████\"██████████████████████████████\n                           ,██████▌   ▀███████████████████████████▌\n              ,▄           ███████▌     ▀██████████████████▀▀▐█████\n            ▄█████▄        ████████▄      ▀███████████▀▀     ██████\n           ▐████████▄,   ,▄████████████▄▄▄█████████,        ███████\n           ██████████████████████████████████████████▄▄▄▄▄▄███████▌     ,▄███▄\n          ]█████████████████████████╙█████▀███████████████████████   ,▄████████\n          ]█████▀▀▀█████████████████  \"▀'   ▀█▀▀ ▀███▀ ▐██████████▄████████████W\n           ██▀      `████▀███████████                  ▐███████████████████████▌\n           ▀          ▀   ▐███████████▄███▄,██▄  ▄▄▄  ╓████████████████████████▌\n                          ▐██████████████████████████▄█████████████████▀▀▀█████\n                           █████████████████████████████████▀`  ▀███▀      ▀██▀\n                           ████████████████████████████████▌      `         \"▀\n                           ▐███████████████████████████████\n                            ██████████████████████████████`\n                            ▐█████████████████████████████\n                             ▀████████████████████████████\n                              ████████████████████████████\n                               ▀██████████████████████████▌\n                                ▀███████████████████████████▄\n                                  ▀████████████████████████████▄▄,,,,,\n                                    ▀█████████████████████████████████████▄,\n                                       ▀▀████████████████████████████████████▄\n                                          `▀▀██████████████████▀▀▀\"-        ▀█▄\n                                                '▀▀▀▀▀▀▀▀`                    ▀L\n"
+  },
 
   {
     "name": "zombie",
@@ -74,7 +74,9 @@
     "description": [
       "The grand ballroom is filled with dust-covered chandeliers, crumbling pillars, and faded tapestries.  Suddenly, a low groan interrupts the silence. You see what looks a dead man walking? A zombie perhaps."
     ],
-    "sceneFailed": "The zombie becomes overwhelmed by its hunger for flesh and lunges at you with a ferocious bite. Your life comes to a gruesome end."
+    "sceneFailed": "The zombie becomes overwhelmed by its hunger for flesh and lunges at you with a ferocious bite. Your life comes to a gruesome end.",
+    "art" : "                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀"
+
   },
   {
     "name": "succubus",
@@ -105,7 +107,8 @@
       "The door squeaks as it opens, revealing the presence of a seductive succubus in the room. She exudes an aura of allure and mystery, drawing you into her captivating presence.",
       "With narrowed, serpentine eyes and a forked tongue flickering enticingly, the succubus approaches, showing her teeth in an alluring yet dangerous manner."
     ],
-    "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel."
+    "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel.",
+    "art" : "TBD"
   },
   {
     "name": "direbear",
@@ -137,7 +140,8 @@
       "The door opens, revealing a den where a massive direbear resides. The bear, having just awoken from its winter hibernation, shakes off the snow clinging to its thick fur. Its hungry gaze locks onto you, baring its teeth and slowly approaching. The growls coming from its stomach compete with the growls emanating from the bear itself.",
       "The warmth of the den invites you to take a nap, but time is of the essence. Above the stairs lies the parlor, while descending the stairs leads you back to the Chambre de Plaisir."
     ],
-    "sceneFailed": "Driven by its insatiable hunger, the direbear launches itself at you with a ferocious bite. Your life comes to an end."
+    "sceneFailed": "Driven by its insatiable hunger, the direbear launches itself at you with a ferocious bite. Your life comes to an end.",
+    "art" : "TBD"
   },
   {
     "name": "werewolf",
@@ -168,6 +172,7 @@
     "description": [
       "As you enter the parlor, a sense of unease washes over you. The room's opulent decor contrasts with the eerie atmosphere. Suddenly, a chilling presence manifests before your eyes. Standing in the center is a massive werewolf, its form exuding both power and vulnerability."
     ],
-    "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey."
+    "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey.",
+    "art" : "TBD"
   }
 ]
