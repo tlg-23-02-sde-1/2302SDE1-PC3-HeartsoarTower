@@ -31,17 +31,20 @@ class HeartsoarTower {
     private DisplayArt art = new DisplayArt();
     private DisplayInput inputter = new DisplayInput();
     private DisplayText text = new DisplayText();
-
+    private MusicPlayer musicPlayer;
 
 
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
         this.isRunning = true;
+        this.musicPlayer = new MusicPlayer();
     }
 
     void gameLoop() {
 
         TitleScreen.displayTitleScreen();
+        musicPlayer.setFilePath("src/main/resources/Music/medievalrpg-music.wav");
+        musicPlayer.play();
         newGame();
         Scanner scanner = new Scanner(System.in);
         boolean justEntered = true;
