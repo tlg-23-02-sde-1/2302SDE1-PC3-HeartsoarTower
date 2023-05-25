@@ -1,6 +1,9 @@
 package com.tlg.view;
 
 import com.tlg.model.Monster;
+import com.tlg.model.Room;
+
+import java.util.List;
 
 public class DisplayArt extends Display {
     private final static int MAX_LINES = 30;
@@ -11,8 +14,22 @@ public class DisplayArt extends Display {
     }
 
     public void displayMonster(Monster monster) {
-        System.out.println(MAX_LINES);
         setDisplay(monster.getArt());
+    }
+    public void defeatMonster(Monster monster, DisplayText text, DisplayInput inputter, List<Room> rooms) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(monster.getArt());
+        for (int i = 0; i < MAX_LINES - 1; i++){
+            sb.insert(0, "\n");
+            setDisplay(sb.toString());
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            DisplayEngine.printScreen(this, text, inputter, rooms );
+        }
+        monster.setArt(this);
     }
 
     public void setDisplay(String display) {

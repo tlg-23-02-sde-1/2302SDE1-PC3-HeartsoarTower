@@ -1,14 +1,21 @@
 package com.tlg.model;
 
 
+import com.tlg.view.DisplayArt;
+import com.tlg.view.DisplayInput;
+import com.tlg.view.DisplayText;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.awt.SystemColor.text;
 
 public class Scene {
     private Room room;
     private String[] description = new String[3];
     private List<Item> sceneItems = new ArrayList<>();
     private List<Monster> sceneMonsters = new ArrayList<>();
+    private DisplayArt displayArt = new DisplayArt();
 
     Scene(SceneBuilder sceneBuilder, List<Room> rooms, List<Item> items, List<Monster> monsters) {
 //        Associate the room with the correct room:
@@ -53,8 +60,8 @@ public class Scene {
     public  void addMonster(Monster e){
         sceneMonsters.add(e);
     }
-    public void defeatMonster(Monster e){
-//        TODO: MAYBE ADD THE DEFEAT INFO
+    public void defeatMonster(Monster e, DisplayText text, DisplayInput inputter, List<Room> rooms){
+        displayArt.defeatMonster(e, text, inputter, rooms);
         sceneMonsters.remove(e);
     }
 }

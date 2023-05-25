@@ -30,7 +30,9 @@ class CombatEngine {
             successes.remove(0);
             actionTaken = true;
             if (successes.size() == 0) {
-                scene.defeatMonster(scene.getSceneMonsters(0));
+                scene.defeatMonster(scene.getSceneMonsters(0), text, inputter, rooms);
+//                Kill the monster by adding an extra white line 30 times until the monster has dissapeared:
+
             }
             text.setDisplay(monster.progressDescription());
         }
