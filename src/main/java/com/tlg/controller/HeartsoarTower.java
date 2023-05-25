@@ -56,18 +56,16 @@ class HeartsoarTower {
             Boolean actionTaken = false;
             if (scene.getAllSceneMonsters().size() != 0)
                 actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine, rooms);
-            if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
-            if (!actionTaken) actionTaken = specificCommands(instruct, player, scene);
+            if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms, displayEngine, art, text, inputter);
+            if (!actionTaken) actionTaken = specificCommands(instruct, player, scene, displayEngine, art, text, inputter, rooms);
             if (!actionTaken) {
-                actionTaken = moveCommands(instruct, player, scene, rooms, displayEngine);
+                actionTaken = moveCommands(instruct, player, scene, rooms);
                 if (actionTaken) {
                     justEntered = true;
-                    displayEngine.printScreen(art, text, inputter, rooms);
                 }
             }
             if (!actionTaken) {
                 text.setDisplay("I do not know that command.  Please try again:    ");
-                displayEngine.printScreen(art, text, inputter, rooms);
             }
         }
     }

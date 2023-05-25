@@ -3,10 +3,20 @@
     "room"     : "entrance",
     "description"     : [
       "As you enter the castle, a shiver wracks your body as the temperature plummets  despite the harvest sun.  The stench of death stains your senses; the thick and  muggy room is seen through your quickly watering eyes.  Candles throughout the room cast sickening shadows dancing along the walls, and the sound of weeping permeates everything.  It comes from nowhere and everywhere.  As the shiver finishes arresting your body, your mind wonders if the crying is coming from inside your own mind, but then you see the source.  A ghost seems to phase in and out of existence at the front of the room, but completely frozen mid-step towards you with both feet six inches off the cobble floor.  All happiness drains from you as you look down to draw your sword.  As you do this you look up and the ghost has made an obvious dash to you, but has re-froze after its untethered rush.  You blink in disbelief and fearfully realize it is now inches closer despite never seeing it actually move.  The crying grows louder, almost desperate.  What do you do?",
-      "You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the ghostly figure has shrunken to a size you can put in your pocket.  The door to leave the castle is shut, but it seems like the door on the right is ajar.",
-      "You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the room remains empty.  The door to leave the castle is shut, but it seems like the door on the right is ajar."
+      "You are at the entrance of the castle.  The floating candles have settled on the ground, and the ghostly figure has shrunken to a size you can put in your pocket.  The door to leave the castle is shut, but it seems like the door on the right is ajar.",
+      "You are at the entrance of the castle.  The floating candles have settled on the ground, and the room remains empty.  The door to leave the castle is shut, but it seems like the door on the right is ajar."
     ],
     "items"    : ["Casper"],
     "monsters" : ["ghost"]
+  },
+  {
+    "room"     : "foyer",
+    "description"     : [
+      "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  As if the tower is mocking us, a key lays next to the door.",
+      "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside the recess.  The keyhole is so deeply drilled into the door that your hand cannot fit inside. To the left you have the castle entrance, and to the right you have what might possibly be the kitchen.\n",
+      "You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the room remains empty.  The door to leave the castle is shut, but it seems like the door on the right is ajar."
+    ],
+    "items"    : ["key"],
+    "monsters" : ["key"]
   }
 ]

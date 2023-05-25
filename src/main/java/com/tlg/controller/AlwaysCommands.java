@@ -4,6 +4,10 @@ import com.tlg.model.Item;
 import com.tlg.model.Player;
 import com.tlg.model.Room;
 import com.tlg.model.Scene;
+import com.tlg.view.DisplayArt;
+import com.tlg.view.DisplayEngine;
+import com.tlg.view.DisplayInput;
+import com.tlg.view.DisplayText;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,10 +18,11 @@ import java.util.Scanner;
  * AlwaysCommands are commands that are available to the player regardless of the location
  */
 class AlwaysCommands {
-    protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms){
+    protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput inputter) {
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
         if (instruct == null) {
-            System.out.println("Invalid Command.");
+            text.setDisplay("Invalid Command.");
+            displayEngine.printScreen(art, text, inputter, rooms);
             return false;
         }
         else if (instruct[0].equalsIgnoreCase("quit")) {
@@ -25,11 +30,12 @@ class AlwaysCommands {
         }
         else if (instruct[0].equalsIgnoreCase("help")) {
             help();
+            displayEngine.printScreen(art, text, inputter, rooms);
             return true;
         }
         else if (instruct[1].equalsIgnoreCase("inventory")) {
-            System.out.println("You have the following items in your inventory:");
-            System.out.println(player.getInventory());
+            text.setDisplay("You have the following items in your inventory:" + player.getInventory());
+            displayEngine.printScreen(art, text, inputter, rooms);
         }
         else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
             lookAtSword();
@@ -49,11 +55,37 @@ class AlwaysCommands {
 
 
     private static void help() {
-        System.out.println("You can use the following commands:");
-        System.out.println("go <direction>");
-        System.out.println("look <item>");
-        System.out.println("check inventory");
-        System.out.println("quit");
+//      Clear the console screen:
+        System.out.println("\033[H\033[2J");
+        System.out.flush();
+        System.out.println(
+
+                        "    ██████████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▀▀█████████\n" +
+                        "    █████████`Welcome to Heartsoar Tower █░░▒▐████████\n" +
+                        "    █████████                           ▐░█░▒░████████\n" +
+                        "    ████████▌ You can use the following: ▒▌▒▒▒████████\n" +
+                        "    ████████▌                           █▒█▒▒▒████████\n" +
+                        "    █████████   go <direction>          █▒▀░▒▐████████\n" +
+                        "    █████████⌐    look <item>           ▐█████████████\n" +
+                        "    █████████▌      look around          █████████████\n" +
+                        "    ██████████       check inventory     ▐████████████\n" +
+                        "    ███████████       talk <npc>          ████████████\n" +
+                        "    ███████████µ        use <item>        ▐███████████\n" +
+                        "    ████████████         drop <item>       ███████████\n" +
+                        "    ████████████▌       quit                ██████████\n" +
+                        "    █████████████                           ▐█████████\n" +
+                        "    █████████████▌                           █████████\n" +
+                        "    ██████████████                           └████████\n" +
+                        "    ██████████▀▀▀▀▀MMMMMMMMMMMMMMMMMMMMMMM█ß▄ ████████\n" +
+                        "    ████████'                            ▐▌▒░▌▐███████\n" +
+                        "    ███████▌                             █▒▒▒█▐███████\n" +
+                        "    ███████▌  Press enter to continue    █▒▒▒█▐███████\n" +
+                        "    ████████                             ▐▄▄▄▀▐███████\n" +
+                        "    ████████▄                             █   ████████\n" +
+                        "    █████████▀∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞4▀4█████████\n");
+//        Press enter to continue
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 
     private static void lookAtItem(String item, Player player) {

@@ -1,5 +1,7 @@
 package com.tlg.model;
 
+import com.tlg.view.DisplayArt;
+
 import java.util.List;
 import java.util.Random;
 
@@ -54,5 +56,9 @@ public class Monster {
 
     public String getArt() {
         return art;
+    }
+
+    public void setArt(DisplayArt art) {
+        this.art = art.getDisplay();
     }
 }
