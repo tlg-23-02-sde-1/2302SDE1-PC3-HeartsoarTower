@@ -10,16 +10,18 @@ public class Monster {
     private List<String> description; // Description of the monster after each success action
     private String sceneFailed; // Scene to go to if the player fails to kill the monster
     private List<String> dialogue;
+    private String art;
 
 
 
-    public Monster(String name, List<String[]> successes, List<String> failures, List<String> description, String sceneFailed, List<String> dialogue) {
+    public Monster(String name, List<String[]> successes, List<String> failures, List<String> description, String sceneFailed, List<String> dialogue, String art) {
         this.name = name;
         this.successes = successes;
         this.failures = failures;
         this.description = description;
         this.sceneFailed = sceneFailed;
         this.dialogue = dialogue;
+        this.art = art;
     }
 
 
@@ -42,11 +44,15 @@ public class Monster {
     public List<String[]> getSuccesses() {
         return successes;
     }
-    public void progressDescription(){
-        System.out.println(description.get(0));
-        description.remove(0);
+    public String progressDescription(){
+        String result = description.remove(0);
+        return result;
     }
-    public void getSceneFailed() {
-        System.out.println(sceneFailed);
+    public String getSceneFailed() {
+        return sceneFailed;
+    }
+
+    public String getArt() {
+        return art;
     }
 }

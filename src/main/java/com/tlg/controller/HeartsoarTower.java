@@ -1,14 +1,17 @@
 package com.tlg.controller;
 
 import com.tlg.model.*;
-import com.tlg.view.TitleScreen;
+import com.tlg.view.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.*;
+import java.util.List;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 import static com.tlg.controller.AlwaysCommands.alwaysAvailableCommands;
 import static com.tlg.controller.CombatEngine.combatCommands;
+import static com.tlg.controller.MoveCommand.moveCommands;
 import static com.tlg.controller.NewGame.newGame;
 import static com.tlg.controller.SpecificCommands.specificCommands;
 
@@ -24,6 +27,12 @@ class HeartsoarTower {
     private Scene scene;
     private boolean isRunning;
     private List<Scene> scenes = factory.getScenes();
+    private DisplayEngine displayEngine = new DisplayEngine();
+    private DisplayArt art = new DisplayArt();
+    private DisplayInput inputter = new DisplayInput();
+    private DisplayText text = new DisplayText();
+
+
 
     HeartsoarTower() throws IOException {
         this.player = new Player(rooms);
@@ -35,19 +44,28 @@ class HeartsoarTower {
         TitleScreen.displayTitleScreen();
         newGame();
         Scanner scanner = new Scanner(System.in);
+        boolean justEntered = true;
         while (isRunning) {
-            grabScene();
-            System.out.println("Enter a command:");
+            if (justEntered) grabScene();
+            justEntered = false;
             String input = scanner.nextLine();
-            String [] instruct = textParser.validCombo(input);
+            String[] instruct = textParser.validCombo(input);
             Boolean actionTaken = false;
-            if (scene.getAllSceneMonsters().size() != 0) actionTaken = combatCommands(instruct, player, scene);
-            if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
+            if (scene.getAllSceneMonsters().size() != 0)
+                actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine);
             if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms);
             if (!actionTaken) actionTaken = specificCommands(instruct, player, scene);
-            if (!actionTaken) System.out.println("Invalid Command.");
+            if (!actionTaken) {
+                actionTaken = moveCommands(instruct, player, scene, rooms);
+                if (actionTaken) justEntered = true;
+            }
+            if (!actionTaken) {
+                text.setDisplay("I do not know that command.  Please try again:    ");
+                displayEngine.printScreen(art, text, inputter);
+            }
         }
     }
+
     private void grabScene() {
         for (Scene scene : scenes) {
             if (scene.getRoom().equals(player.getLocation())) {
@@ -56,7 +74,11 @@ class HeartsoarTower {
         }
 //        Print the description based on if the monster is present (0), if an item is present(1), or if complete(3)
         if (scene.getAllSceneMonsters().size() != 0) {
-            System.out.println(scene.getDescription(0));
+            String monsterPicture = scene.getAllSceneMonsters().get(0).getArt();
+            art.setDisplay(monsterPicture);
+            text.setDisplay(scene.getDescription(0));
+            inputter.setDisplay("Enter a command:    ");
+            displayEngine.printScreen(art, text, inputter);
         }
         else if (scene.getSceneItems().size() != 0) {
             System.out.println(scene.getDescription(1));
