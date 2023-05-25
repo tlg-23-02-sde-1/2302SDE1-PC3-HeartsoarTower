@@ -41,10 +41,133 @@
       "You talk to the ghost.  He just wants to be seen.  His crying is getting the floor wet.  If only you had something to give him to dry his tears...",
       "You use the handkerchief to dry the ghost's tears.  He thanks you and grows so small that he shrinks to the size of a pocket watch and asks to come with you.  You can now go through the door to the right."
     ],
-
     "sceneFailed" : "The ghost is not impressed by your actions.  He grows to the size of a house and eats you.  You are dead.",
-
-    "art" : "\n\n                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀\n                         '``\n"
+    "art" : "\n\n                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀\n                         '``\n",
   }
 
+  {
+    "name": "zombie",
+    "successes": [
+      ["talk", "zombie"],
+      ["give", "ghost"]
+    ],
+    "failures": [
+      "run",
+      "yell",
+      "scream",
+      "hide",
+      "attack",
+      "fight",
+      "hit",
+      "kick",
+      "punch",
+      "slap",
+      "bite",
+      "scratch",
+      "go"
+    ],
+    "dialogue": [
+      "The zombie emits a low groan, its voice filled with melancholy.",
+      "The zombie doesn't respond to your presence, its vacant eyes staring into nothingness.",
+      "The zombie's feeble groan becomes slightly louder, as if longing for companionship."
+    ],
+    "description": [
+      "The grand ballroom is filled with dust-covered chandeliers, crumbling pillars, and faded tapestries.  Suddenly, a low groan interrupts the silence. You see what looks a dead man walking? A zombie perhaps."
+    ],
+    "sceneFailed": "The zombie becomes overwhelmed by its hunger for flesh and lunges at you with a ferocious bite. Your life comes to a gruesome end."
+  },
+  {
+    "name": "succubus",
+    "successes": [
+      ["talk", "succubus"],
+      ["share", "memories"]
+    ],
+    "failures": [
+      "run",
+      "yell",
+      "scream",
+      "hide",
+      "attack",
+      "fight",
+      "hit",
+      "kick",
+      "punch",
+      "slap",
+      "bite",
+      "scratch",
+      "go"
+    ],
+    "dialogue": [
+      "The succubus emits a sultry sigh, her voice filled with seductive allure.",
+      "Her enchanting gaze pierces through you."
+    ],
+    "description": [
+      "The door squeaks as it opens, revealing the presence of a seductive succubus in the room. She exudes an aura of allure and mystery, drawing you into her captivating presence.",
+      "With narrowed, serpentine eyes and a forked tongue flickering enticingly, the succubus approaches, showing her teeth in an alluring yet dangerous manner."
+    ],
+    "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel."
+  },
+  {
+    "name": "direbear",
+    "successes": [
+      ["talk", "direbear"],
+      ["feed", "direbear"]
+    ],
+    "failures": [
+      "run",
+      "yell",
+      "scream",
+      "hide",
+      "attack",
+      "fight",
+      "hit",
+      "kick",
+      "punch",
+      "slap",
+      "bite",
+      "scratch",
+      "go"
+    ],
+    "dialogue": [
+      "The direbear emits a deep growl, its voice reflecting a mix of hunger and territorial instinct.",
+      "Its vacant eyes fixate on you, its gaze filled with primal intensity.",
+      "The direbear's growl reverberates through the den, as if asserting its dominance and warning you to proceed with caution."
+    ],
+    "description": [
+      "The door opens, revealing a den where a massive direbear resides. The bear, having just awoken from its winter hibernation, shakes off the snow clinging to its thick fur. Its hungry gaze locks onto you, baring its teeth and slowly approaching. The growls coming from its stomach compete with the growls emanating from the bear itself.",
+      "The warmth of the den invites you to take a nap, but time is of the essence. Above the stairs lies the parlor, while descending the stairs leads you back to the Chambre de Plaisir."
+    ],
+    "sceneFailed": "Driven by its insatiable hunger, the direbear launches itself at you with a ferocious bite. Your life comes to an end."
+  },
+  {
+    "name": "werewolf",
+    "successes": [
+      ["teach", "werewolf"],
+      ["show", "understanding"]
+    ],
+    "failures": [
+      "run",
+      "yell",
+      "scream",
+      "hide",
+      "attack",
+      "fight",
+      "hit",
+      "kick",
+      "punch",
+      "slap",
+      "bite",
+      "scratch",
+      "trap"
+    ],
+    "dialogue": [
+      "The werewolf emits a deep growl, its voice reflecting a mix of primal ferocity and deep longing.",
+      "Its yellow eyes, shining with an untamed hunger, lock onto you with a mix of curiosity and caution.",
+      "The werewolf's voice resonates with a blend of human and beast, carrying a deep yearning for freedom and acceptance."
+    ],
+    "description": [
+      "As you enter the parlor, a sense of unease washes over you. The room's opulent decor contrasts with the eerie atmosphere. Suddenly, a chilling presence manifests before your eyes. Standing in the center is a massive werewolf, its form exuding both power and vulnerability."
+    ],
+    "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey."
+  }
 ]
