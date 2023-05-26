@@ -35,7 +35,7 @@ class HeartsoarTower {
 
 
     HeartsoarTower() throws IOException {
-        this.player = new Player(rooms);
+        this.player = new Player(rooms, items);
         this.isRunning = true;
         this.musicPlayer = new MusicPlayer();
     }
