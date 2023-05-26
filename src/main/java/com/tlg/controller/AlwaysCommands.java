@@ -20,10 +20,10 @@ import java.util.Scanner;
 class AlwaysCommands {
     protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput inputter) {
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
-        if (instruct == null) {
+        if (instruct[0] == null && instruct[1] == null) {
             text.setDisplay("Invalid Command.");
             displayEngine.printScreen(art, text, inputter, rooms);
-            return false;
+            return true;
         }
         else if (instruct[0].equalsIgnoreCase("quit")) {
             quitGame();
