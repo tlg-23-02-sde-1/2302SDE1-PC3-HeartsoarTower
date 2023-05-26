@@ -52,4 +52,7 @@ public class Player {
         inventory.remove(e);
     }
 
+    public String getName() {
+        return name;
+    }
 }
