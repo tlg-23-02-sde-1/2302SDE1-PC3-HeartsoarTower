@@ -38,8 +38,8 @@
   "door": ["door"],
   "sandwich": ["sandwich"],
   "goblin": ["goblin"],
-  "island": ["island"],
-  "counter": ["counter"],
+  "island": ["island",
+    "counter"],
   "toaster": ["toaster"],
   "mix": ["mix"],
   "mixer": ["mixer"],
@@ -68,5 +68,6 @@
     "hankie",
     "hankys",
     "hankerchief"
-  ]
+  ],
+  "off" : ["off"]
 }

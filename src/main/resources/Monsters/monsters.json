@@ -3,14 +3,8 @@
     "name" : "ghost",
 
     "successes" : [
-        [
-        "talk",
-        "ghost"
-        ],
-        [
-        "use",
-        "handkerchief"
-        ]
+        ["talk", "ghost"],
+        ["use","handkerchief"]
       ],
 
     "failures" : [
@@ -42,7 +36,8 @@
       "You use the handkerchief to dry the ghost's tears.  He thanks you and grows so small that he shrinks to the size of a pocket watch and asks to come with you.  You can now go through the door to the right."
     ],
     "sceneFailed" : "The ghost is not impressed by your actions.  He grows to the size of a house and eats you.  You are dead.",
-    "art" : "                                        ,▄▄▄███████▄▄▄,\n                                    ▄▄████████████████████▄,\n                                 ,███████████████████████████▄,\n                               ▄████████████████████████████████\n                              ███████████████████████████████████▄\n                            ╓██████\"██████████████████████████████\n                           ,██████▌   ▀███████████████████████████▌\n              ,▄           ███████▌     ▀██████████████████▀▀▐█████\n            ▄█████▄        ████████▄      ▀███████████▀▀     ██████\n           ▐████████▄,   ,▄████████████▄▄▄█████████,        ███████\n           ██████████████████████████████████████████▄▄▄▄▄▄███████▌     ,▄███▄\n          ]█████████████████████████╙█████▀███████████████████████   ,▄████████\n          ]█████▀▀▀█████████████████  \"▀'   ▀█▀▀ ▀███▀ ▐██████████▄████████████W\n           ██▀      `████▀███████████                  ▐███████████████████████▌\n           ▀          ▀   ▐███████████▄███▄,██▄  ▄▄▄  ╓████████████████████████▌\n                          ▐██████████████████████████▄█████████████████▀▀▀█████\n                           █████████████████████████████████▀`  ▀███▀      ▀██▀\n                           ████████████████████████████████▌      `         \"▀\n                           ▐███████████████████████████████\n                            ██████████████████████████████`\n                            ▐█████████████████████████████\n                             ▀████████████████████████████\n                              ████████████████████████████\n                               ▀██████████████████████████▌\n                                ▀███████████████████████████▄\n                                  ▀████████████████████████████▄▄,,,,,\n                                    ▀█████████████████████████████████████▄,\n                                       ▀▀████████████████████████████████████▄\n                                          `▀▀██████████████████▀▀▀\"-        ▀█▄\n                                                '▀▀▀▀▀▀▀▀`                    ▀L\n"
+    "art" : "                                        ,▄▄▄███████▄▄▄,\n                                    ▄▄████████████████████▄,\n                                 ,███████████████████████████▄,\n                               ▄████████████████████████████████\n                              ███████████████████████████████████▄\n                            ╓██████\"██████████████████████████████\n                           ,██████▌   ▀███████████████████████████▌\n              ,▄           ███████▌     ▀██████████████████▀▀▐█████\n            ▄█████▄        ████████▄      ▀███████████▀▀     ██████\n           ▐████████▄,   ,▄████████████▄▄▄█████████,        ███████\n           ██████████████████████████████████████████▄▄▄▄▄▄███████▌     ,▄███▄\n          ]█████████████████████████╙█████▀███████████████████████   ,▄████████\n          ]█████▀▀▀█████████████████  \"▀'   ▀█▀▀ ▀███▀ ▐██████████▄████████████W\n           ██▀      `████▀███████████                  ▐███████████████████████▌\n           ▀          ▀   ▐███████████▄███▄,██▄  ▄▄▄  ╓████████████████████████▌\n                          ▐██████████████████████████▄█████████████████▀▀▀█████\n                           █████████████████████████████████▀`  ▀███▀      ▀██▀\n                           ████████████████████████████████▌      `         \"▀\n                           ▐███████████████████████████████\n                            ██████████████████████████████`\n                            ▐█████████████████████████████\n                             ▀████████████████████████████\n                              ████████████████████████████\n                               ▀██████████████████████████▌\n                                ▀███████████████████████████▄\n                                  ▀████████████████████████████▄▄,,,,,\n                                    ▀█████████████████████████████████████▄,\n                                       ▀▀████████████████████████████████████▄\n                                          `▀▀██████████████████▀▀▀\"-        ▀█▄\n                                                '▀▀▀▀▀▀▀▀`                    ▀L\n",
+    "item" : "Casper"
   },
   {
     "name" : "key",
@@ -65,7 +60,8 @@
       "You pick up the key.  It's a key.  You can use it to open doors.  But your hand can't quite fit through the keyhole to the door at the top of the stairs."
     ],
     "sceneFailed" : "N/A",
-    "art" : "\n\n\n                                                                      ,▄▄▄▄▄\n                                                                   ▄███████████▄\n                                                                 ▄██████▀▀▀██████▄\n                                                                ▄█████'     ██████▄\n                                                               ▄██████      ███████▌\n     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███████████████████████████████▄▄▄████████▀         ▀█████\n    ▄██████████████████████████████████████████████████████████████⌐           █████\n    ╙███████████████████████████████████████████████████████████████          ▄█████\n          █████   █████   ▀  ▀▀▀'---`                          ▀██████K     ███████▌\n          █████   █████                                         ▐█████▌     ▐██████\n          █████   █████                                          ╙█████▄▄,▄▄█████▀\n          █████   █████                                            ▀███████████▀\n          █████   █████                                               `▀▀▀▀▀`\n          ████▀    ▀▀▀▀\n\n\n\n\n\n\n\n"
+    "art" : "\n\n\n                                                                      ,▄▄▄▄▄\n                                                                   ▄███████████▄\n                                                                 ▄██████▀▀▀██████▄\n                                                                ▄█████'     ██████▄\n                                                               ▄██████      ███████▌\n     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███████████████████████████████▄▄▄████████▀         ▀█████\n    ▄██████████████████████████████████████████████████████████████⌐           █████\n    ╙███████████████████████████████████████████████████████████████          ▄█████\n          █████   █████   ▀  ▀▀▀'---`                          ▀██████K     ███████▌\n          █████   █████                                         ▐█████▌     ▐██████\n          █████   █████                                          ╙█████▄▄,▄▄█████▀\n          █████   █████                                            ▀███████████▀\n          █████   █████                                               `▀▀▀▀▀`\n          ████▀    ▀▀▀▀\n\n\n\n\n\n\n\n",
+    "item" : null
   },
 
   {
@@ -98,7 +94,8 @@
       "The grand ballroom is filled with dust-covered chandeliers, crumbling pillars, and faded tapestries.  Suddenly, a low groan interrupts the silence. You see what looks a dead man walking? A zombie perhaps."
     ],
     "sceneFailed": "The zombie becomes overwhelmed by its hunger for flesh and lunges at you with a ferocious bite. Your life comes to a gruesome end.",
-    "art" : "                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀"
+    "art" : "                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀",
+    "item" : null
 
   },
   {
@@ -131,7 +128,8 @@
       "With narrowed, serpentine eyes and a forked tongue flickering enticingly, the succubus approaches, showing her teeth in an alluring yet dangerous manner."
     ],
     "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel.",
-    "art" : "TBD"
+    "art" : "TBD",
+    "item" : null
   },
   {
     "name": "direbear",
@@ -164,7 +162,8 @@
       "The warmth of the den invites you to take a nap, but time is of the essence. Above the stairs lies the parlor, while descending the stairs leads you back to the Chambre de Plaisir."
     ],
     "sceneFailed": "Driven by its insatiable hunger, the direbear launches itself at you with a ferocious bite. Your life comes to an end.",
-    "art" : "TBD"
+    "art" : "TBD",
+    "item" : null
   },
   {
     "name": "werewolf",
@@ -196,6 +195,36 @@
       "As you enter the parlor, a sense of unease washes over you. The room's opulent decor contrasts with the eerie atmosphere. Suddenly, a chilling presence manifests before your eyes. Standing in the center is a massive werewolf, its form exuding both power and vulnerability."
     ],
     "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey.",
-    "art" : "TBD"
+    "art" : "TBD",
+    "item" : null
+  },
+  {
+    "name": "Goblin",
+    "successes": [
+      ["move", "island"],
+      ["turn", "off"]
+    ],
+    "failures": [
+      "go",
+      "run",
+      "laugh",
+      "attack",
+      "swing",
+      "leave",
+      "sword"
+
+    ],
+    "dialogue": [
+      "The goblin is so hyper it can barely concentrate.  He's still eyeing the island.  Did you move it yet?",
+      "WEAK WEEK WEAK WEEK I'M SO WEAK!!!",
+      "\"Too smol to be this angry.\"  He's still eyeing the island.  Did you move it yet?"
+    ],
+    "description": [
+      "You move the kitchen island blocking the door.  He's elated and promises to help you out if you let him come with you.  But right now the kitchen looks like its about to burn down.  Is that stove still on???",
+      "You turn off the stove.  The goblin promises to help you in the future if you'll let him."
+    ],
+    "sceneFailed": "The goblin jumps off the walls as the kitchen burns down around you.  Congrats... you ded.",
+    "art" : "            ,      ,   \n           /(.-\"\"-.)\\\n        |\\ \\/      \\/ /|\n        | \\/ =.  .= \\/ |\n        \\( \\  o\\/o  / )/\n         \\_, '/  \\' ,_/\n          /   \\__/   \\\n          \\,___/\\___,/\n        ___\\ \\|uu|/ /___\n      /`    \\ .--. /    `\\\n jgs /       '----'       \\",
+    "item" : "goblin"
   }
 ]

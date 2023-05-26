@@ -47,5 +47,20 @@
     "onUse" : "You reach out and gently placed the teddy bear in the trembling Prince Timore's hands. Its softness and warmth brought solace, comforting him and bringing him a sense of peace.",
     "isStorable" : true,
     "art" : "TBD"
+  },
+  {
+    "name" : "Goblin",
+    "description" : " He's still thankful and wants to help you.  Maybe if there's something you can't reach he can assist",
+    "onUse" : "Good try",
+    "isStorable" : true,
+    "art" : "            ,      ,   \n           /(.-\"\"-.)\\\n        |\\ \\/      \\/ /|\n        | \\/ =.  .= \\/ |\n        \\( \\  o\\/o  / )/\n         \\_, '/  \\' ,_/\n          /   \\__/   \\\n          \\,___/\\___,/\n        ___\\ \\|uu|/ /___\n      /`    \\ .--. /    `\\\n jgs /       '----'       \\"
+    },
+  {
+    "name": "Sword",
+    "description": " It is a shiny sword, adorned with intricate carvings. ",
+    "onUse": " You swing the sword and it makes a whooshing sound. ",
+    "isStorable": true,
+    "art": "TBD"
   }
+
 ]

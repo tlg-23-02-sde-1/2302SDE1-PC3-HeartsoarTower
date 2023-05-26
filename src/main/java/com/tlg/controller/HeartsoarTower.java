@@ -29,15 +29,16 @@ class HeartsoarTower {
     private List<Scene> scenes = factory.getScenes();
     private DisplayEngine displayEngine = new DisplayEngine();
     private DisplayArt art = new DisplayArt();
-    private DisplayInput inputter = new DisplayInput();
+    private DisplayInput inputter;
     private DisplayText text = new DisplayText();
     private MusicPlayer musicPlayer;
 
 
     HeartsoarTower() throws IOException {
-        this.player = new Player(rooms);
+        this.player = new Player(rooms, items);
         this.isRunning = true;
         this.musicPlayer = new MusicPlayer();
+        this.inputter = new DisplayInput(player);
     }
 
     void gameLoop() {
@@ -72,6 +73,7 @@ class HeartsoarTower {
         for (Scene scene : scenes) {
             if (scene.getRoom().equals(player.getLocation())) {
                 this.scene = scene;
+                break;
             }
         }
 //        Print the description based on if the monster is present (0), if an item is present(1), or if complete(3)
@@ -79,7 +81,6 @@ class HeartsoarTower {
             String monsterPicture = scene.getAllSceneMonsters().get(0).getArt();
             art.setDisplay(monsterPicture);
             text.setDisplay(scene.getDescription(0));
-            inputter.setDisplay("Enter a command:    ");
             displayEngine.printScreen(art, text, inputter, rooms);
         }
         else if (scene.getSceneItems().size() != 0) {

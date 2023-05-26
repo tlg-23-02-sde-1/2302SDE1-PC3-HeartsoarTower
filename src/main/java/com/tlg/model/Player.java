@@ -1,6 +1,5 @@
 package com.tlg.model;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ public class Player {
     private Map map;
 
 
-    public Player(List<Room> rooms) {
+    public Player(List<Room> rooms,List<Item> items) {
 //        Set the location with the name Entrance
         for (Room room : rooms){
             if (room.getName().equals("Entrance")){
@@ -21,7 +20,20 @@ public class Player {
                 break;
             }
         }
-
+        String handkerchief = "Handkerchief";
+        String amulet = "Magical Amulet";
+        String sword = "Sword";
+        for (Item item : items){
+            if (item.getName().equals(handkerchief)){
+                addItemToInventory(item);
+            }
+            if (item.getName().equals(amulet)){
+                addItemToInventory(item);
+            }
+            if (item.getName().equals(sword)){
+                addItemToInventory(item);
+            }
+        }
     }
     public Room getLocation() {
         return location;
@@ -52,4 +64,7 @@ public class Player {
         inventory.remove(e);
     }
 
+    public String getName() {
+        return name;
+    }
 }

@@ -41,7 +41,11 @@ class AlwaysCommands {
         }
         if (instruct[1] != null) {
             if (instruct[1].equalsIgnoreCase("inventory")) {
-                text.setDisplay("You have the following items in your inventory:" + player.getInventory());
+                StringBuilder inventory = new StringBuilder();
+                for (Item item : player.getInventory()) {
+                    inventory.append(item.getName()).append(", ");
+                }
+                text.setDisplay("You have the following items in your inventory:" + inventory.toString());
                 displayEngine.printScreen(art, text, inputter, rooms);
             }
         } else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {

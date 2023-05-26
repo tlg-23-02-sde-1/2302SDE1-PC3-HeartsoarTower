@@ -1,9 +1,6 @@
 package com.tlg.controller;
 
-import com.tlg.model.Monster;
-import com.tlg.model.Player;
-import com.tlg.model.Room;
-import com.tlg.model.Scene;
+import com.tlg.model.*;
 import com.tlg.view.DisplayArt;
 import com.tlg.view.DisplayEngine;
 import com.tlg.view.DisplayInput;
@@ -13,7 +10,7 @@ import java.util.List;
 
 class CombatEngine {
 
-    public static boolean combatCommands(String[] instruct, Player player, Scene scene, DisplayArt art, DisplayText text, DisplayInput inputter, DisplayEngine displayEngine, List<Room> rooms) {
+    public static boolean combatCommands(String[] instruct, Player player, Scene scene, DisplayArt art, DisplayText text, DisplayInput inputter, DisplayEngine displayEngine, List<Room> rooms, List<Item> items) {
         boolean actionTaken = false;
 //        Verify there's even a monster in the room:
         if (scene.getSceneMonsters(0) == null) return actionTaken;
@@ -30,6 +27,14 @@ class CombatEngine {
             successes.remove(0);
             actionTaken = true;
             if (successes.size() == 0) {
+                String addItem = monster.deleteItem();
+                if (addItem != null) {
+                    for (Item item : items) {
+                        if (item.getName().equalsIgnoreCase(addItem)) {
+                            scene.addItem(item);
+                        }
+                    }
+                }
                 scene.defeatMonster(scene.getSceneMonsters(0), text, inputter, rooms);
 //                Kill the monster by adding an extra white line 30 times until the monster has dissapeared:
 

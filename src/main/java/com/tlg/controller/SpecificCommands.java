@@ -34,6 +34,7 @@ SpecificCommands {
                     player.addItemToInventory(item);
                     art.setDisplay(item.getArt());
                     text.setDisplay("You picked up the " + item.getName() + " and added to your inventory.");
+                    input.setDisplay();
                     displayEngine.printScreen(art, text, input, rooms);
 //                    Remove from the scene:
                     scene.removeItem(item);

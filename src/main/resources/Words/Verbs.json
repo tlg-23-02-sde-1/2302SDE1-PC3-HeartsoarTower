@@ -1,7 +1,6 @@
 {
   "go": [
     "go",
-    "move",
     "run",
     "walk",
     "climb",
@@ -67,10 +66,24 @@
     "bite",
     "scratch"
   ],
+
   "music" : [
     "music",
     "audio",
     "volume"
+    ]
+  "move" : [
+    "move",
+    "push",
+    "pull",
+    "slide",
+    "shift",
+    "shove"
+  ],
+  "turn" : [
+    "shut",
+    "turn",
+    "unplug"
   ]
 
 }

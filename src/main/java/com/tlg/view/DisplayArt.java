@@ -23,7 +23,7 @@ public class DisplayArt extends Display {
             sb.insert(0, "\n");
             setDisplay(sb.toString());
             try {
-                Thread.sleep(100);
+                Thread.sleep(40);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
