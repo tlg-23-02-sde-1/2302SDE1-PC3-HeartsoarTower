@@ -1,7 +1,6 @@
 {
   "go": [
     "go",
-    "move",
     "run",
     "walk",
     "climb",
@@ -66,6 +65,19 @@
     "slap",
     "bite",
     "scratch"
+  ],
+  "move" : [
+    "move",
+    "push",
+    "pull",
+    "slide",
+    "shift",
+    "shove"
+  ],
+  "turn" : [
+    "shut",
+    "turn",
+    "unplug"
   ]
 
 }

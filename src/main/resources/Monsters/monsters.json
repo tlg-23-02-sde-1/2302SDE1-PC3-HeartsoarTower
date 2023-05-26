@@ -3,14 +3,8 @@
     "name" : "ghost",
 
     "successes" : [
-        [
-        "talk",
-        "ghost"
-        ],
-        [
-        "use",
-        "handkerchief"
-        ]
+        ["talk", "ghost"],
+        ["use","handkerchief"]
       ],
 
     "failures" : [
@@ -217,18 +211,20 @@
       "attack",
       "swing",
       "leave",
+      "sword"
 
     ],
     "dialogue": [
-      "The goblin is so hyper it can barely concentrate.  He's still eyeing the island",
-      "Her enchanting gaze pierces through you."
+      "The goblin is so hyper it can barely concentrate.  He's still eyeing the island.  Did you move it yet?",
+      "WEAK WEEK WEAK WEEK I'M SO WEAK!!!",
+      "\"Too smol to be this angry.\"  He's still eyeing the island.  Did you move it yet?"
     ],
     "description": [
-      "The door squeaks as it opens, revealing the presence of a seductive succubus in the room. She exudes an aura of allure and mystery, drawing you into her captivating presence.",
-      "With narrowed, serpentine eyes and a forked tongue flickering enticingly, the succubus approaches, showing her teeth in an alluring yet dangerous manner."
+      "You move the kitchen island blocking the door.  He's elated and promises to help you out if you let him come with you.  But right now the kitchen looks like its about to burn down.  Is that stove still on???",
+      "You turn off the stove.  The goblin promises to help you in the future if you'll let him."
     ],
-    "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel.",
-    "art" : "TBD",
-    "item" : null
+    "sceneFailed": "The goblin jumps off the walls as the kitchen burns down around you.  Congrats... you ded.",
+    "art" : "            ,      ,   \n           /(.-\"\"-.)\\\n        |\\ \\/      \\/ /|\n        | \\/ =.  .= \\/ |\n        \\( \\  o\\/o  / )/\n         \\_, '/  \\' ,_/\n          /   \\__/   \\\n          \\,___/\\___,/\n        ___\\ \\|uu|/ /___\n      /`    \\ .--. /    `\\\n jgs /       '----'       \\",
+    "item" : "goblin"
   }
 ]
