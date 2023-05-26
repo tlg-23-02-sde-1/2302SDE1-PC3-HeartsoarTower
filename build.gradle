@@ -45,9 +45,6 @@ javadoc {
 assemble {
     dependsOn shadowJar, javadocJar
 }
-compileJava {
-    options.encoding = "UTF-8"
-}
 project.tasks.withType(Jar).configureEach {
     it.exclude('**/.keep')
 }

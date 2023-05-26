@@ -46,10 +46,13 @@
       [
         "get",
         "key"
-      ]
+      ],
+      ["use", "goblin"]
     ],
 
     "failures" : [
+      "up",
+      "north"
     ],
 
     "dialogue" : [
@@ -57,9 +60,11 @@
     ],
 
     "description" : [
-      "You pick up the key.  It's a key.  You can use it to open doors.  But your hand can't quite fit through the keyhole to the door at the top of the stairs."
+      "You pick up the key.  It's a key.  You can use it to open doors.  But your hand can't quite fit through the keyhole to the door at the top of the stairs.",
+      "You use the goblin to open the door at the top of the stairs.  You can now go up."
+
     ],
-    "sceneFailed" : "N/A",
+    "sceneFailed" : "You can't go up the stairs until the door is unlocked.",
     "art" : "\n\n\n                                                                      ,▄▄▄▄▄\n                                                                   ▄███████████▄\n                                                                 ▄██████▀▀▀██████▄\n                                                                ▄█████'     ██████▄\n                                                               ▄██████      ███████▌\n     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███████████████████████████████▄▄▄████████▀         ▀█████\n    ▄██████████████████████████████████████████████████████████████⌐           █████\n    ╙███████████████████████████████████████████████████████████████          ▄█████\n          █████   █████   ▀  ▀▀▀'---`                          ▀██████K     ███████▌\n          █████   █████                                         ▐█████▌     ▐██████\n          █████   █████                                          ╙█████▄▄,▄▄█████▀\n          █████   █████                                            ▀███████████▀\n          █████   █████                                               `▀▀▀▀▀`\n          ████▀    ▀▀▀▀\n\n\n\n\n\n\n\n",
     "item" : null
   },

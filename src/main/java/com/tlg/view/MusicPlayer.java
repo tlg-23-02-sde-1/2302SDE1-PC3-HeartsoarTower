@@ -1,7 +1,9 @@
 package com.tlg.view;
 import javax.sound.sampled.*;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class MusicPlayer {
     private Clip clip;
@@ -11,7 +13,11 @@ public class MusicPlayer {
     public void play(String filePath) {
         stop();
             try {
-                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(filePath));
+//                For audio: Input stream is funky.  Needs buffered in order to go backwards.  Note:  Pictures will work very similar
+                InputStream input = getClass().getClassLoader().getResourceAsStream(filePath);
+//                Buffered allows us to use mark and reset
+                InputStream buffer = new BufferedInputStream(input);
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(buffer);
                 clip = AudioSystem.getClip();
                 clip.open(audioInputStream);
                 volumeControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);

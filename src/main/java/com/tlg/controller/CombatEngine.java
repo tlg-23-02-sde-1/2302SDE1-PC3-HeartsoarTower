@@ -41,7 +41,7 @@ class CombatEngine {
             }
             text.setDisplay(monster.progressDescription());
         }
-        else if(failures.contains(instruct[0])){
+        else if(failures.contains(instruct[0]) || failures.contains(instruct[1])){
             actionTaken = true;
             text.setDisplay(monster.getSceneFailed());
 //            TODO: RETURN TO SAVE POINT

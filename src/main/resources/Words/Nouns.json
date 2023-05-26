@@ -69,5 +69,6 @@
     "hankys",
     "hankerchief"
   ],
-  "off" : ["off"]
+  "off" : ["off"],
+  "key" : ["key"]
 }
