@@ -47,5 +47,13 @@
     "onUse" : "You reach out and gently placed the teddy bear in the trembling Prince Timore's hands. Its softness and warmth brought solace, comforting him and bringing him a sense of peace.",
     "isStorable" : true,
     "art" : "TBD"
+  },
+  {
+    "name": "Sword",
+    "description": " It is a shiny sword, adorned with intricate carvings. ",
+    "onUse": " You swing the sword and it makes a whooshing sound. ",
+    "isStorable": true,
+    "art": "TBD"
   }
+
 ]
