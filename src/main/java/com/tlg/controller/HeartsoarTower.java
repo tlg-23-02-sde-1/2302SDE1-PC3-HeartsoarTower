@@ -42,7 +42,7 @@ class HeartsoarTower {
     }
 
     void gameLoop() {
-        musicPlayer.play("Music/medievalrpg-music.wav");
+//        musicPlayer.play("Music/medievalrpg-music.wav");
         TitleScreen.displayTitleScreen();
         newGame();
         Scanner scanner = new Scanner(System.in);
