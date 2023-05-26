@@ -203,5 +203,32 @@
     "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey.",
     "art" : "TBD",
     "item" : null
+  },
+  {
+    "name": "Goblin",
+    "successes": [
+      ["move", "island"],
+      ["turn", "off"]
+    ],
+    "failures": [
+      "go",
+      "run",
+      "laugh",
+      "attack",
+      "swing",
+      "leave",
+
+    ],
+    "dialogue": [
+      "The goblin is so hyper it can barely concentrate.  He's still eyeing the island",
+      "Her enchanting gaze pierces through you."
+    ],
+    "description": [
+      "The door squeaks as it opens, revealing the presence of a seductive succubus in the room. She exudes an aura of allure and mystery, drawing you into her captivating presence.",
+      "With narrowed, serpentine eyes and a forked tongue flickering enticingly, the succubus approaches, showing her teeth in an alluring yet dangerous manner."
+    ],
+    "sceneFailed": "Overwhelmed by your resistance, the succubus reveals her true form, an embodiment of darkness and seduction. She engulfs you in an inescapable embrace, draining your life force until you are left with nothing but an empty vessel.",
+    "art" : "TBD",
+    "item" : null
   }
 ]
