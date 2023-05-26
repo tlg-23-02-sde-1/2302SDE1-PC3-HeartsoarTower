@@ -22,6 +22,11 @@ class SpecificCommands {
                 displayEngine.printScreen(art, text, input, rooms);
                 return true;
             }
+            if (instruct[1] == null) {
+                text.setDisplay("I could not pick that up.");
+                displayEngine.printScreen(art, text, input, rooms);
+                return true;
+            }
             for (Item item : scene.getSceneItems()) {
                 if (item.getName().equalsIgnoreCase(instruct[1])) {
 //                    Add to our inventory:

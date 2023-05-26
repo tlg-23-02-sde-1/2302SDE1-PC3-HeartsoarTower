@@ -25,27 +25,34 @@ class AlwaysCommands {
             displayEngine.printScreen(art, text, inputter, rooms);
             return true;
         }
-        else if (instruct[0].equalsIgnoreCase("quit")) {
-            quitGame();
+        if(instruct[0] != null){
+            if (instruct[0].equalsIgnoreCase("quit")) {
+                quitGame();
+            }
+            else if (instruct[0].equalsIgnoreCase("help")) {
+                help();
+                displayEngine.printScreen(art, text, inputter, rooms);
+                return true;
+            }
+            else if (instruct[0].equalsIgnoreCase("look")) {
+                if (instruct[1] == null || instruct[1].equalsIgnoreCase("around")){
+                    System.out.println("You look around the room.");
+                    lookAround(player);
+                    return true;
+                }
+            }
         }
-        else if (instruct[0].equalsIgnoreCase("help")) {
-            help();
-            displayEngine.printScreen(art, text, inputter, rooms);
-            return true;
+        if(instruct[1] != null){
+            if (instruct[1].equalsIgnoreCase("inventory")) {
+                text.setDisplay("You have the following items in your inventory:" + player.getInventory());
+                displayEngine.printScreen(art, text, inputter, rooms);
+            }
         }
-        else if (instruct[1].equalsIgnoreCase("inventory")) {
-            text.setDisplay("You have the following items in your inventory:" + player.getInventory());
-            displayEngine.printScreen(art, text, inputter, rooms);
-        }
+
         else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
             lookAtSword();
         }
-        else if (instruct[0].equalsIgnoreCase("look")) {
-            if (instruct[1] == null || instruct[1].equalsIgnoreCase("around")){
-                System.out.println("You look around the room.");
-                lookAround(player);
-            }
-        }
+
 
 //        else {
 //            System.out.println("Invalid Command. Please try another way.");
