@@ -46,9 +46,15 @@ class SpecificCommands {
 
         } else if (instruct[0].equalsIgnoreCase("drop")) {
 //            Check to see if the item is in the inventory:
+            if (player.getInventory().size() == 0) {
+                text.setDisplay("You have nothing to drop.");
+                displayEngine.printScreen(art, text, input, rooms);
+                return true;
+            }
             for (Item item : player.getInventory()) {
                 if (item.getName().equalsIgnoreCase(instruct[1])) {
                     player.removeItemFromInventory(item);
+                    scene.addItem(item);
                     text.setDisplay("You dropped the " + item.getName() + ".");
                     displayEngine.printScreen(art, text, input, rooms);
                     return true;
