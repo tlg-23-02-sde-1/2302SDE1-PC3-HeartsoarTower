@@ -66,6 +66,12 @@
     "bite",
     "scratch"
   ],
+
+  "music" : [
+    "music",
+    "audio",
+    "volume"
+    ]
   "move" : [
     "move",
     "push",
