@@ -6,7 +6,7 @@
       "You are at the entrance of the castle.  The floating candles have settled on the ground, and the ghostly figure has shrunken to a size you can put in your pocket.  The door to leave the castle is shut, but it seems like the door on the right is ajar.",
       "You are at the entrance of the castle.  The floating candles have settled on the ground, and the room remains empty.  The door to leave the castle is shut, but it seems like the door on the right is ajar."
     ],
-    "items"    : ["Casper"],
+    "items"    : [],
     "monsters" : ["ghost"]
   },
   {

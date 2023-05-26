@@ -56,7 +56,7 @@ class HeartsoarTower {
             String[] instruct = textParser.validCombo(input);
             Boolean actionTaken = false;
             if (scene.getAllSceneMonsters().size() != 0)
-                actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine, rooms);
+                actionTaken = combatCommands(instruct, player, scene, art, text, inputter, displayEngine, rooms, items);
             if (!actionTaken) actionTaken = alwaysAvailableCommands(instruct, player, scene, rooms, displayEngine, art, text, inputter);
             if (!actionTaken) actionTaken = specificCommands(instruct, player, scene, displayEngine, art, text, inputter, rooms);
             if (!actionTaken) {

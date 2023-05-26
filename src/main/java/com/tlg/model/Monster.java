@@ -13,10 +13,11 @@ public class Monster {
     private String sceneFailed; // Scene to go to if the player fails to kill the monster
     private List<String> dialogue;
     private String art;
+    private String item;
 
 
 
-    public Monster(String name, List<String[]> successes, List<String> failures, List<String> description, String sceneFailed, List<String> dialogue, String art) {
+    public Monster(String name, List<String[]> successes, List<String> failures, List<String> description, String sceneFailed, List<String> dialogue, String art, String item) {
         this.name = name;
         this.successes = successes;
         this.failures = failures;
@@ -24,6 +25,10 @@ public class Monster {
         this.sceneFailed = sceneFailed;
         this.dialogue = dialogue;
         this.art = art;
+        this.item = item;
+
+
+
     }
 
 
@@ -60,5 +65,17 @@ public class Monster {
 
     public void setArt(DisplayArt art) {
         this.art = art.getDisplay();
+    }
+
+    public String getItem() {
+        return item;
+    }
+    public void addItem(String item) {
+        this.item = item;
+    }
+    public String deleteItem() {
+        String result = item;
+        item = null;
+        return result;
     }
 }
