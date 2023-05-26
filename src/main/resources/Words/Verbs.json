@@ -66,6 +66,11 @@
     "slap",
     "bite",
     "scratch"
+  ],
+  "music" : [
+    "music",
+    "audio",
+    "volume"
   ]
 
 }
