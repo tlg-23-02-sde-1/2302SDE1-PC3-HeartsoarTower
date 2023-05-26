@@ -12,7 +12,8 @@ import java.util.List;
 /**
  * Handles commands that need awareness of model state.
  */
-class SpecificCommands {
+class
+SpecificCommands {
     protected static boolean specificCommands(String[] instruct, Player player, Scene scene, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput input, List<Room> rooms) {
 //        Get item:
         if (instruct[0].equalsIgnoreCase("get")) {
