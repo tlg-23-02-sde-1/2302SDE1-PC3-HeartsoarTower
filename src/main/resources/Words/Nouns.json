@@ -38,15 +38,18 @@
   "door": ["door"],
   "sandwich": ["sandwich"],
   "goblin": ["goblin"],
-  "island": ["island"],
-  "counter": ["counter"],
+  "island": ["island",
+    "counter"],
   "toaster": ["toaster"],
   "mix": ["mix"],
   "mixer": ["mixer"],
   "succubus": ["succubus"],
   "werewolf": ["werewolf"],
   "bear": ["bear"],
-  "direbear": ["direbear"],
+  "direbear": ["direbear",
+    "dire",
+    "bear"
+    ],
   "vampire": ["vampire"],
   "mirror": ["mirror"],
   "zombie": ["zombie"],
@@ -59,5 +62,24 @@
   "gun": ["gun"],
   "inventory": ["inventory"],
   "casper" : ["casper"],
-  "around" : ["around"]
+  "around" : ["around"],
+  "handkerchief" : [
+    "handkerchief",
+    "handkerchiefs",
+    "hanky",
+    "hankies",
+    "hankie",
+    "hankys",
+    "hankerchief"
+  ],
+  "teddy" : [
+    "teddy",
+    "teddybear",
+    "teddybears"
+
+  ],
+  "off" : ["off"],
+  "key" : ["key"],
+  "blanket" : ["blanket"],
+  "understanding" : ["understanding"]
 }

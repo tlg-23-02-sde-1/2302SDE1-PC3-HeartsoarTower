@@ -2,9 +2,7 @@
   {
     "name": "Entrance",
     "desc": [
-      "As you enter the castle, a shiver wracks your body as the temperature plummets  despite the harvest sun.  The stench of death stains your senses; the thick and  muggy room is seen through your quickly watering eyes.  Candles throughout the room cast sickening shadows dancing along the walls, and the sound of weeping permeates everything.  It comes from nowhere and everywhere.  As the shiver finishes arresting your body, your mind wonders if the crying is coming from inside your own mind, but then you see the source.  A ghost seems to phase in and out of existence at the front of the room, but completely frozen mid-step towards you with both feet six inches off the cobble floor.  All happiness drains from you as you look down to draw your sword.  As you do this you look up and the ghost has made an obvious dash to you, but has re-froze after its untethered rush.  You blink in disbelief and fearfully realize it is now inches closer despite never seeing it actually move.  The crying grows louder, almost desperate.  What do you do?",
-      "You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the ghostly figure has shrunken to a size you can put in your pocket.  The door to leave the castle is shut, but it seems like the door on the right is ajar.",
-      "You enter a foyer at the beginning of the castle.  The floating candles have settled on the ground, and the room remains empty.  The door to leave the castle is shut, but it seems like the door on the right is ajar."
+      "You are at the entrance of the castle. The door to leave the castle is shut, but it seems like the door on the right is ajar."
     ],
     "nouns": [
       "candle",
@@ -22,9 +20,7 @@
   {
     "name": "Foyer",
     "desc": [
-      "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  As if the tower is mocking us, a key lays next to the door.",
-      "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  The keyhole is so deeply drilled into the door that your hand cannot fit inside.\n\n To the left you have the castle entrance, and to the right you have what might possibly be the kitchen.\n",
-      "You once again enter the gleaming foyer.  To the left is entrance.  To the right is the kitchen.  Up is to a dimly lit room."
+      "A beautiful staircase leads up to two doors.  One that has been nailed shut so strongly it appears that not even the best magic in the world could pry open this door.  The other is a dark metal door with a keyhole drilled deep inside\nthe recess.  The keyhole is so deeply drilled into the door that your hand cannot fit inside.\n\n To the left you have the castle entrance, and to the right you have what might possibly be the kitchen.\n"
     ],
     "nouns": [
       "staircase",
@@ -37,7 +33,118 @@
     "monster": null,
     "neighborRooms": {
       "left"  : "Entrance",
-      "right" : "Kitchen"
+      "right" : "Kitchen",
+      "up"    : "Plaisure"
+    }
+  },
+  {
+    "name": "Kitchen",
+    "desc": [
+      "A chaotic kitchen filled with magical cooking appliances of unknown origin. Wires connect a metal box that spits out blackened bread, while a mini crane spins a metallic whip inside a bowl, flinging cow's milk across the white marbled countertop. A wood stove expels an intense heat without any visible fuel. Frozen water leaks from a compartmented box, and various liquids spill from transparent vessels."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Goblin",
+    "neighborRooms": {
+      "left": "Foyer"
+    }
+  },
+  {
+    "name": "Plaisure",
+    "desc": [
+      "A dimly lit chamber with plush furnishings and a soothing ambiance. Soft music plays in the background, and a faint scent of something  fills the air. Heading down takes you back to the Foyer, and there is a staircase heading up."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Succubus",
+    "neighborRooms": {
+      "down" : "Foyer",
+      "up"   : "Den"
+    }
+  },
+  {
+    "name": "Den",
+    "desc": [
+      "Your senses are greeted by the musky scent of leather. The den is filled with rugged furniture and hunting trophies, hinting at the wild adventures that took place here. A cozy fireplace crackles, providing a comforting warmth in the midst of the wilderness. Heading down takes you back to the Chamber, and going up takes you somewhere new."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Dire Bear",
+    "neighborRooms": {
+      "down" : "Plaisure",
+      "up"   : "Parlor"
+    }
+  },
+  {
+    "name": "Parlor",
+    "desc": [
+      "The parlor room bears the marks of recent commotion, with furniture hastily rearranged and signs of minor destruction. The atmosphere is tinged with a sense of youthful rebellion, as if the space has been touched by the wild energy of a teenage spirit. To the right is a door leading somewhere. You came from downstairs, and looks like the stairs keep going upwards as well."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Werewolf",
+    "neighborRooms": {
+      "down" : "Den",
+      "up"   : "Ballroom",
+      "right": "Bed Chambers"
+    }
+  },
+  {
+    "name": "Bed Chambers",
+    "desc": [
+      "You enter a lavish bedroom fit for royalty. The room is adorned with luxurious fabrics, intricate woodwork, and gilded decorations. A bed stands proudly in the center, draped with rich velvet curtains. A large mirror stands in the corner. You've entered through the only door in the room."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Vampire",
+    "neighborRooms": {
+      "left" : "Parlor"
+    }
+  },
+  {
+    "name": "Ballroom",
+    "desc": [
+      "You step into an opulent ballroom, adorned with crystal chandeliers and intricate decorations. The room is filled with an air of grandeur, as if it once hosted splendid dances and glamorous gatherings. Moonlight streams in through tall windows, casting a soft glow on the polished marble floor. "
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Zombie",
+    "neighborRooms": {
+      "down" : "Parlor",
+      "up"   : "Conservatory"
+    }
+  },
+  {
+    "name": "Conservatory",
+    "desc": [
+      "An assortment of exotic and unfamiliar plants sprawl out, from a large buzzing machine in a strangely organized chaos. The smell of something completely exotic, strangely alien, hangs heavy in the air. In the midst of this orchestrated chaos of exotic plant life, the true gem of the room is its domed glass ceiling, resembling a closed eye, blocking out the cosmic ballet above. Looks like a stair case going up is on the other side of the room. Heading down takes you back to the Ballroom."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Alien",
+    "neighborRooms": {
+      "down" : "Ballroom",
+      "up"   : "Bedroom"
+    }
+  },
+  {
+    "name": "Bedroom",
+    "desc": [
+      "You step into a bedroom that reflects the spirited nature of its occupant. The room is a delightful mess, with clothes scattered haphazardly, books piled high on the desk, and toys strewn across the floor. The walls are adorned with drawings and posters, showcasing the prince's varied interests. Despite the disarray, there is a vibrant energy that fills the air, hinting at the prince's curious and imaginative nature. You're at the top of the tower, with nowhere else to go besides back to the previous room."
+    ],
+    "nouns": [
+      "TBD"
+    ],
+    "monster": "Prince",
+    "neighborRooms": {
+      "down" : "Conservatory"
     }
   }
 ]

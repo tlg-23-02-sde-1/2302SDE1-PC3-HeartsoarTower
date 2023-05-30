@@ -1,7 +1,6 @@
 {
   "go": [
     "go",
-    "move",
     "run",
     "walk",
     "climb",
@@ -18,7 +17,8 @@
     "casting",
     "shoot",
     "throw",
-    "give"
+    "give",
+    "touch"
   ],
   "talk": [
     "talk",
@@ -50,5 +50,77 @@
     "help"
   ],
   "get" : ["get"],
-  "drop": ["drop"]
+  "drop": ["drop"],
+  "yell" : [
+    "scream"
+  ],
+  "cry" : ["cry"],
+  "hide" : ["hide"],
+  "attack" : [
+    "attack",
+    "fight",
+    "kill",
+    "hit",
+    "punch",
+    "kick",
+    "slap",
+    "bite",
+    "scratch"
+  ],
+
+  "music" : [
+    "music",
+    "audio",
+    "volume"
+    ],
+  "move" : [
+    "move",
+    "push",
+    "pull",
+    "slide",
+    "shift",
+    "shove"
+  ],
+  "turn" : [
+    "shut",
+    "turn",
+    "unplug"
+  ],
+  "reject" : [
+    "reject"
+  ],
+  "hug" : [
+    "hug",
+    "embrace"
+  ],
+  "comfort" : [
+    "comfort",
+    "soothe",
+    "calm"
+  ],
+  "remove" : [
+    "remove"
+  ],
+  "affirm" : [
+    "affirm"
+  ],
+  "feed" : [
+    "feed"
+  ],
+  "teach" : [
+    "teach",
+    "taught",
+    "teaching"
+  ],
+  "show" : [
+    "show",
+    "display",
+    "present"
+  ],
+  "dance" : [
+    "dance",
+    "dancing",
+    "danced",
+    "dances"
+  ]
 }
