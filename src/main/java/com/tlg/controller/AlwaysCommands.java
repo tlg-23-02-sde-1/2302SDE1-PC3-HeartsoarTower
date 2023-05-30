@@ -5,6 +5,7 @@ import com.tlg.model.Player;
 import com.tlg.model.Room;
 import com.tlg.model.Scene;
 import com.tlg.view.*;
+import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +43,7 @@ class AlwaysCommands {
                     return true;
                 } else {
 
-                lookAtItem(instruct[1], player);
+                lookAtItem(instruct[1], player, scene, displayEngine, art, text, inputter, rooms);
                 return true;
                 }
             } else if (instruct[0].equalsIgnoreCase("music")) {
@@ -104,24 +105,26 @@ class AlwaysCommands {
         scanner.nextLine();
     }
 
-    private static void lookAtItem(String item, Player player) {
+    private static void lookAtItem(String itemName, Player player, Scene scene, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput inputter, List<Room> rooms) {
         Item foundItem = null;
-        for (Item sceneItem : player.getLocation().getItems()) {
-            if (sceneItem.getName().equalsIgnoreCase(item)) {
-                foundItem = sceneItem;
+        for (Item item: scene.getSceneItems()) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                foundItem = item;
                 break;
             }
         }
         if (foundItem == null) {
             for (Item inventoryItem : player.getInventory()) {
-                if (inventoryItem.getName().equalsIgnoreCase(item)) {
+                if (inventoryItem.getName().equalsIgnoreCase(itemName)) {
                     foundItem = inventoryItem;
                     break;
                 }
             }
         }
         if (foundItem != null) {
-            System.out.println(foundItem.getDescription());
+            text.setDisplay(foundItem.getDescription());
+            art.setDisplay(foundItem.getArt());
+            displayEngine.printScreen(art, text, inputter, rooms);
         } else {
             System.out.println("You don't see that item here.");
         }

@@ -13,6 +13,11 @@ class CombatEngine {
 
     public static boolean combatCommands(String[] instruct, Player player, Scene scene, DisplayArt art, DisplayText text, DisplayInput inputter, DisplayEngine displayEngine, List<Room> rooms, List<Item> items) {
         boolean actionTaken = false;
+        if (instruct[0] == null && instruct[1] == null) {
+            text.setDisplay("Invalid Command.");
+            displayEngine.printScreen(art, text, inputter, rooms);
+            return true;
+        }
 //        Verify there's even a monster in the room:
         if (scene.getSceneMonsters(0) == null) return actionTaken;
 //        Every monster has some acceptable commands for defeating:
