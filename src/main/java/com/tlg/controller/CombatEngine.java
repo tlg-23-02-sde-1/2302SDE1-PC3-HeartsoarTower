@@ -7,6 +7,7 @@ import com.tlg.view.DisplayInput;
 import com.tlg.view.DisplayText;
 
 import java.util.List;
+import java.util.Scanner;
 
 class CombatEngine {
 
@@ -41,11 +42,19 @@ class CombatEngine {
             }
             text.setDisplay(monster.progressDescription());
         }
-        else if(failures.contains(instruct[0]) || failures.contains(instruct[1])){
-            actionTaken = true;
-            text.setDisplay(monster.getSceneFailed());
+        else if(!instruct[0].equalsIgnoreCase("look")){
+            if (failures.contains(instruct[0]) || failures.contains(instruct[1])){
+                actionTaken = true;
+                text.setDisplay(monster.getSceneFailed());
 //            TODO: RETURN TO SAVE POINT
-        }
+                System.out.println("Press enter to continue...");
+                Scanner scanner = new Scanner(System.in);
+                scanner.nextLine();
+                player.useAmulet();
+            }
+            }
+
+
         if (actionTaken) displayEngine.printScreen(art, text, inputter, rooms);
         return actionTaken;
     }
