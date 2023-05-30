@@ -69,6 +69,12 @@
     "hankys",
     "hankerchief"
   ],
+  "teddy" : [
+    "teddy",
+    "teddybear",
+    "teddybears"
+  ],
   "off" : ["off"],
-  "key" : ["key"]
+  "key" : ["key"],
+  "blanket" : ["blanket"]
 }

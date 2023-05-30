@@ -84,6 +84,24 @@
     "shut",
     "turn",
     "unplug"
+  ],
+  "reject" : [
+    "reject"
+  ],
+  "hug" : [
+    "hug",
+    "embrace"
+  ],
+  "comfort" : [
+    "comfort",
+    "soothe",
+    "calm"
+  ],
+  "remove" : [
+    "remove"
+  ],
+  "affirm" : [
+    "affirm"
   ]
 
 }
