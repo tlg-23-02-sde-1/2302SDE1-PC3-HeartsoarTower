@@ -30,6 +30,17 @@ class CombatEngine {
         String successNoun = successes.get(0)[1];
 
         if (successVerb.equalsIgnoreCase(instruct[0]) && successNoun.equalsIgnoreCase(instruct[1])){
+//            First determine if the player has the item:
+            if (instruct[0].equalsIgnoreCase("use")){
+                boolean hasItem = player.hasItem(instruct[1]);
+                if (hasItem){
+                    player.removeItemFromInventory(instruct[1]);
+                } else {
+                    text.setDisplay("You don't have that item.");
+                    displayEngine.printScreen(art, text, inputter, rooms);
+                    return true;
+                }
+            }
             successes.remove(0);
             actionTaken = true;
             if (successes.size() == 0) {

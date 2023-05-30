@@ -63,6 +63,23 @@ public class Player {
     public void removeItemFromInventory(Item e){
         inventory.remove(e);
     }
+    public void removeItemFromInventory(String e){
+        for (Item item : inventory){
+            if (item.getName().equalsIgnoreCase(e)){
+                inventory.remove(item);
+                break;
+            }
+        }
+    }
+
+    public Boolean hasItem(String itemName){
+        for (Item item : inventory){
+            if (item.getName().equalsIgnoreCase(itemName)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public String getName() {
         return name;
