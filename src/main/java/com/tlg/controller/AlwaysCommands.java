@@ -31,7 +31,7 @@ class AlwaysCommands {
                 return true;
             } else if (instruct[0].equalsIgnoreCase("look")) {
                 if (instruct[1] == null || instruct[1].equalsIgnoreCase("around")) {
-                    System.out.println("You look around the room.");
+                    System.out.println("Looking around...");
                     lookAround(player);
                     return true;
                 }
@@ -49,7 +49,7 @@ class AlwaysCommands {
                 displayEngine.printScreen(art, text, inputter, rooms);
             }
         } else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
-            lookAtSword();
+//            lookAtSword();
         }
 
 
@@ -122,14 +122,12 @@ class AlwaysCommands {
         }
     }
 
-    private static void lookAtSword() {
-        System.out.println("It is a shiny sword, adorned with intricate carvings.");
-        System.out.println("What do you want to do next?");
-    }
 
     private static void lookAround(Player player) {
-        System.out.println("You look around the room.");
-        System.out.println(player.getLocation().getDesc());
+        Room currentRoom = player.getLocation();
+        String[] roomDescriptionArray = currentRoom.getDesc();
+        String roomDescription = String.join(" ", roomDescriptionArray);
+        System.out.println(roomDescription);
     }
 
     private static void musicSettings(MusicPlayer musicPlayer) {
@@ -156,6 +154,7 @@ class AlwaysCommands {
                     float volume = volumeInput / 100f;
                     musicPlayer.setVolume(volume);
                     System.out.println("Volume adjusted to " + volumeInput);
+                    System.out.println("Type in a command:");
                 } else {
                     System.out.println("Invalid volume input. Please enter a value between 1 and 100.");
                 }
