@@ -17,7 +17,8 @@
     "casting",
     "shoot",
     "throw",
-    "give"
+    "give",
+    "touch"
   ],
   "talk": [
     "talk",

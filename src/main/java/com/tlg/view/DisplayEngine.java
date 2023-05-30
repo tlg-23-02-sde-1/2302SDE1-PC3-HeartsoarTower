@@ -30,8 +30,6 @@ public class DisplayEngine {
         String art = artDisplay.getDisplay();
         String[] mapLines = map.split("\n");
         String[] artLines = art.split("\n");
-        System.out.println("mapLines: " + mapLines.length);
-        System.out.println("artLines: " + artLines.length);
         String[] output = new String[mapLines.length];
         for (int i = 0; i < mapLines.length; i++) {
             if (artLines.length == 0) {
