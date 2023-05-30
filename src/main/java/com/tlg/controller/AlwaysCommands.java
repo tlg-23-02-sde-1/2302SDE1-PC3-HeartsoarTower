@@ -34,6 +34,10 @@ class AlwaysCommands {
                     System.out.println("Looking around...");
                     lookAround(player);
                     return true;
+                } else {
+
+                lookAtItem(instruct[1], player);
+                return true;
                 }
             } else if (instruct[0].equalsIgnoreCase("music")) {
                 musicSettings(musicPlayer);
@@ -111,12 +115,7 @@ class AlwaysCommands {
             }
         }
         if (foundItem != null) {
-            // TODO: Remove sword and replace with a more generic item
-            if (foundItem.getName().equalsIgnoreCase("Sword")) {
-                System.out.println("It is a shiny sword, adorned with intricate carvings.");
-            } else {
-                System.out.println(foundItem.getDescription());
-            }
+            System.out.println(foundItem.getDescription());
         } else {
             System.out.println("You don't see that item here.");
         }
