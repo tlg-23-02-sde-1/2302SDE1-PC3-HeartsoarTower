@@ -4,6 +4,8 @@ import com.tlg.model.Item;
 import com.tlg.model.Player;
 import com.tlg.model.Room;
 import com.tlg.model.Scene;
+import com.tlg.view.*;
+import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,54 +16,54 @@ import java.util.Scanner;
  * AlwaysCommands are commands that are available to the player regardless of the location
  */
 class AlwaysCommands {
-    protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms){
+    protected static Boolean alwaysAvailableCommands(String[] instruct, Player player, Scene scene, List<Room> rooms, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput inputter, MusicPlayer musicPlayer) {
 //            Functions that we need REGARDLESS of what room we are in or our inventory state:
-        if (instruct == null) {
-            System.out.println("Invalid Command.");
-            return false;
-        }
-        else if (instruct[0].equalsIgnoreCase("quit")) {
-            quitGame();
-        }
-        else if (instruct[0].equalsIgnoreCase("help")) {
-            help();
+        if (instruct[0] == null && instruct[1] == null) {
+            text.setDisplay("Invalid Command.");
+            displayEngine.printScreen(art, text, inputter, rooms);
             return true;
         }
-        else if (instruct[1].equalsIgnoreCase("inventory")) {
-            System.out.println("You have the following items in your inventory:");
-            System.out.println(player.getInventory());
+//        If the player wants to use the magical amulet to go to the previous room:
+        if (instruct[0].equalsIgnoreCase("use") && instruct[1].equalsIgnoreCase("amulet")){
+            player.useAmulet();
+            text.setDisplay("You use the amulet to return to the previous room. " + player.getLocation().getDesc()[0]);
+            displayEngine.printScreen(art, text, inputter, rooms);
         }
-        else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
-            lookAtSword();
-        }
-        else if (instruct[0].equalsIgnoreCase("look")) {
-            if (instruct[1] == null || instruct[1].equalsIgnoreCase("around")){
-                System.out.println("You look around the room.");
-                lookAround(player);
-            }
-        }
-        else if (instruct[0].equalsIgnoreCase("go")) {
-            HashMap<String, String> acceptableDirections = player.getLocation().getNeighborRooms();
-            if (!acceptableDirections.containsKey(instruct[1])) {
-                System.out.println("You cannot go that way.");
+        if (instruct[0] != null) {
+            if (instruct[0].equalsIgnoreCase("quit")) {
+                quitGame();
+            } else if (instruct[0].equalsIgnoreCase("help")) {
+                help();
+                displayEngine.printScreen(art, text, inputter, rooms);
                 return true;
-            }
-//                TODO Step2: Ensure the monster will allow you to flee
-            player.setPrevLocation(player.getLocation());
-            Room nextRoom;
-            String direction = instruct[1];
-            String roomDir = player.getLocation().getNeighborRooms().get(direction);
-//            TODO: Rework Rooms and Scene to transfer descriptions to scene
-            for (Room room : rooms) {
-                if (room.getName().equals(roomDir)) {
-                    nextRoom = room;
-                    player.setLocation(nextRoom);
-                    System.out.println("You have entered the " + player.getLocation().getName() + ".");
-                    System.out.println(scene.getDescription());
+            } else if (instruct[0].equalsIgnoreCase("look")) {
+                if (instruct[1] == null || instruct[1].equalsIgnoreCase("around")) {
+                    System.out.println("Looking around...");
+                    lookAround(player);
                     return true;
+                } else {
+
+                lookAtItem(instruct[1], player, scene, displayEngine, art, text, inputter, rooms);
+                return true;
                 }
+            } else if (instruct[0].equalsIgnoreCase("music")) {
+                musicSettings(musicPlayer);
             }
         }
+        if (instruct[1] != null) {
+            if (instruct[1].equalsIgnoreCase("inventory")) {
+                StringBuilder inventory = new StringBuilder();
+                for (Item item : player.getInventory()) {
+                    inventory.append(item.getName()).append(", ");
+                }
+                text.setDisplay("You have the following items in your inventory:" + inventory.toString());
+                displayEngine.printScreen(art, text, inputter, rooms);
+            }
+        } else if (instruct[0].equalsIgnoreCase("look") && instruct[1].equalsIgnoreCase("sword")) {
+//            lookAtSword();
+        }
+
+
 //        else {
 //            System.out.println("Invalid Command. Please try another way.");
 //        }
@@ -70,48 +72,105 @@ class AlwaysCommands {
 
 
     private static void help() {
-        System.out.println("You can use the following commands:");
-        System.out.println("go <direction>");
-        System.out.println("look <item>");
-        System.out.println("check inventory");
-        System.out.println("quit");
+//      Clear the console screen:
+        System.out.println("\033[H\033[2J");
+        System.out.flush();
+        System.out.println(
+
+                "    ██████████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▀▀█████████\n" +
+                        "    █████████`Welcome to Heartsoar Tower █░░▒▐████████\n" +
+                        "    █████████                           ▐░█░▒░████████\n" +
+                        "    ████████▌ You can use the following: ▒▌▒▒▒████████\n" +
+                        "    ████████▌                           █▒█▒▒▒████████\n" +
+                        "    █████████   go <direction>          █▒▀░▒▐████████\n" +
+                        "    █████████⌐    look <item>           ▐█████████████\n" +
+                        "    █████████▌      look around          █████████████\n" +
+                        "    ██████████       check inventory     ▐████████████\n" +
+                        "    ███████████       talk <npc>          ████████████\n" +
+                        "    ███████████µ        use <item>        ▐███████████\n" +
+                        "    ████████████         drop <item>       ███████████\n" +
+                        "    ████████████▌          music            ██████████\n" +
+                        "    █████████████            quit           ▐█████████\n" +
+                        "    █████████████▌                           █████████\n" +
+                        "    ██████████████                           └████████\n" +
+                        "    ██████████▀▀▀▀▀MMMMMMMMMMMMMMMMMMMMMMM█ß▄ ████████\n" +
+                        "    ████████'                            ▐▌▒░▌▐███████\n" +
+                        "    ███████▌                             █▒▒▒█▐███████\n" +
+                        "    ███████▌  Press enter to continue    █▒▒▒█▐███████\n" +
+                        "    ████████                             ▐▄▄▄▀▐███████\n" +
+                        "    ████████▄                             █   ████████\n" +
+                        "    █████████▀∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞4▀4█████████\n");
+//        Press enter to continue
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 
-    private static void lookAtItem(String item, Player player) {
+    private static void lookAtItem(String itemName, Player player, Scene scene, DisplayEngine displayEngine, DisplayArt art, DisplayText text, DisplayInput inputter, List<Room> rooms) {
         Item foundItem = null;
-        for (Item sceneItem : player.getLocation().getItems()) {
-            if (sceneItem.getName().equalsIgnoreCase(item)) {
-                foundItem = sceneItem;
+        for (Item item: scene.getSceneItems()) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                foundItem = item;
                 break;
             }
         }
         if (foundItem == null) {
             for (Item inventoryItem : player.getInventory()) {
-                if (inventoryItem.getName().equalsIgnoreCase(item)) {
+                if (inventoryItem.getName().equalsIgnoreCase(itemName)) {
                     foundItem = inventoryItem;
                     break;
                 }
             }
         }
         if (foundItem != null) {
-            // TODO: Remove sword and replace with a more generic item
-            if (foundItem.getName().equalsIgnoreCase("Sword")) {
-                System.out.println("It is a shiny sword, adorned with intricate carvings.");
-            } else {
-                System.out.println(foundItem.getDescription());
-            }
+            text.setDisplay(foundItem.getDescription());
+            art.setDisplay(foundItem.getArt());
+            displayEngine.printScreen(art, text, inputter, rooms);
         } else {
             System.out.println("You don't see that item here.");
         }
     }
-    private static void lookAtSword() {
-        System.out.println("It is a shiny sword, adorned with intricate carvings.");
-        System.out.println("What do you want to do next?");
-    }
+
 
     private static void lookAround(Player player) {
-        System.out.println("You look around the room.");
-        System.out.println(player.getLocation().getDesc());
+        Room currentRoom = player.getLocation();
+        String[] roomDescriptionArray = currentRoom.getDesc();
+        String roomDescription = String.join(" ", roomDescriptionArray);
+        System.out.println(roomDescription);
+    }
+
+    private static void musicSettings(MusicPlayer musicPlayer) {
+        System.out.println("=== Music Settings ===");
+        System.out.println("1. Play music");
+        System.out.println("2. Stop music");
+        System.out.println("3. Adjust volume");
+        System.out.println("Enter the number of your choice:");
+
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                musicPlayer.play("src/main/resources/Music/medievalrpg-music.wav");
+                break;
+            case 2:
+                musicPlayer.stop();
+                break;
+            case 3:
+                System.out.println("Enter the volume (1-100):");
+                int volumeInput = scanner.nextInt();
+                if (volumeInput >= 1 && volumeInput <= 100) {
+                    float volume = volumeInput / 100f;
+                    musicPlayer.setVolume(volume);
+                    System.out.println("Volume adjusted to " + volumeInput);
+                    System.out.println("Type in a command:");
+                } else {
+                    System.out.println("Invalid volume input. Please enter a value between 1 and 100.");
+                }
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+                break;
+        }
     }
 
     private static boolean quitGame() {

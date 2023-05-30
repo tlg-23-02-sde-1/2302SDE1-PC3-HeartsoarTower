@@ -19,6 +19,7 @@ class NewGame {
                 System.out.println("Invalid. Please enter 'New Game' to start the game.");
             }
         }
+
         System.out.println("Welcome, Harmony, to the enchanted world of Terra Motus."+
         "\nStory:"+
         "\nThe King and Queen of Terra Motus are grief-stricken. An evil curse has sealed away their young Prince Timore in a tower at the edge of their kingdom."+
@@ -29,5 +30,11 @@ class NewGame {
         "\nTo win, you must free Prince Timore from the curse by reaching the top of the tower."+
 
         "\nAre you ready to begin your journey, Harmony? The fate of Prince Timore rests in your hands!");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nPress Enter to start your journey...");
+        scanner.nextLine();
     }
+
+
 }

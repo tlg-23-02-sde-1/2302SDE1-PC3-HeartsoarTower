@@ -45,7 +45,6 @@ javadoc {
 assemble {
     dependsOn shadowJar, javadocJar
 }
-
 project.tasks.withType(Jar).configureEach {
     it.exclude('**/.keep')
 }
