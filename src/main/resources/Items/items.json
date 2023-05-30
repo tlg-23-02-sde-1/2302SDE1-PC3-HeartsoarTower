@@ -1,10 +1,10 @@
 [
   {
-    "name" : "Magical Amulet",
+    "name" : "Amulet",
     "description" : "A magical amulet that glows with a soft light.",
     "onUse" : "You are returned to an earlier moment.",
     "isStorable" : true,
-    "art" : "TBD"
+    "art" : "             v\n       \\             /\n\n          _________\n `       /         \\      '\n        /  \\     /  \\\n       /             \\\n_     /   _ _ . _ _   \\    _\n      \\               /\n       \\             /\n        \\  /     \\  /\n '       \\_________/      `\n\n\n       /             \\\n              ^"
   },
   {
     "name" : "Casper",
@@ -18,28 +18,28 @@
     "description" : " Slightly faded color with a soft, worn texture. Its edges intricately adorned with delicate lacework, showcasing the artistry of the past.",
     "onUse" : "Hand to new friend a folded handkerchief, symbolizing friendship.",
     "isStorable" : true,
-    "art" : "TBD"
+    "art" : " .-\"-._,-'_`-._,-'_`-._,-'_`-._,-'_`-,_,-'_`-,_,-'_`-,_,-'_`-,_,-'_`-,.\n(  ,-'_,-<.>-'_,-<.>-'_,-<.>-'_,-<.>-'_,-<.>-'_,-<.>-'_,-<.>-'_,-~-} ;.\n \\ \\.'_>-._`-<_>-._`-<_>-._`-<_>-._`-<_>-._`-<_>-._`-<_>-._`-._~--. \\ .\n /\\ \\/ ,-' `-._,-' `-._,-' `-._,-' `-._,-' `-._,-' `-._,-' `-._`./ \\ \\ .\n( (`/ /                                                        `/ /.) ) . \n \\ \\ / \\                                                       / / \\ / . \n  \\ \\') )                                                     ( (,\\ \\ .\n / \\ / /                                                       \\ / \\ \\ .\n(`/ / /                                                        / /.) ) .\n \\ \\ / \\                                                       / / \\ / .\n  \\ \\') )                                                     ( (,\\ \\ .\n / \\ / /                                                       \\ / \\ \\ .\n( (`/ /                                                         / /.) ) . \n \\ \\ / \\                                                       / / \\ / .\n  \\ \\') )                                                     ( (,\\ \\ .\n / \\ / /                                                       \\ / \\ \\ .\n( ( / /                                                         / /.) ) .\n \\ \\ / \\                                                       / / \\ /.\n  \\ \\') )                                                     ( (,\\ \\ .\n / \\ / /                                                       \\ / \\ \\ .\n( ( / /                                                         / /.) ) . \n \\ \\ / \\                                                       / / \\ / . \n  \\ \\') )                                                     ( (,\\ \\ .\n / \\ / /                                                       \\ / \\ \\ . \n( ( / /                                                         / /.) ) .\n \\ \\ / \\       _       _       _       _       _       _       / / \\ /.\n  \\ `.\\ `-._,-'_`-._,-'_`-._,-'_`-._,-'_`-._,-'_`-._,-'_`-._,-'_/,\\ \\ .\n ( `. `,~-._`-<,>-._`-<,>-._`-<,>-._`-<,>-._`-<,>-._`-<,>-._`-=,' ,\\ \\ .\n  `. `'_,-<_>-'_,-<_>-'_,-<_>-'_,-<_>-'_,-<_>-'_,-<_>-'_,-<_>-'_,\"-' ; .\n    `-' `-._,-' `-._,-' `-._,-' `-._,-' `-._,-' `-._,-' `-._,-' `-.-' ."
   },
   {
     "name" : "Key",
     "description" : " A Skeleton key with a sleek cylindrical shaft with a set of teeth at the end.",
     "onUse" : "As the key turns smoothly in the lock, the heavy wooden door creaks open, revealing a sight that instantly captivates the senses. Stepping into the room, you find yourself entering a realm of seduction and allure, as the air itself seems to pulsate with an intoxicating energy.",
     "isStorable" : true,
-    "art" : "TBD"
+    "art" : "     8 8 8 8                     ,ooo.\n     8a8 8a8                    oP   ?b\n    d888a888zzzzzzzzzzzzzzzzzzzz8     8b\n     `\"\"^\"\"'                    ?o___oP'"
   },
   {
     "name" : "Revolver",
     "description" : " A compact firearm that uses a rotating chamber to hold bullets. It has a solid frame, a grip for a comfortable hold, and a barrel for accurate shooting.",
     "onUse" : "You pull the trigger.",
     "isStorable" : true,
-    "art" : "TBD"
+    "art" : "  _  __________=__\n   \\\\@([____]_____()\n  _/\\|-[____]\n /     /(( )\n/____|'----'\n\\____/"
   },
   {
     "name" : "Sandwich",
     "description" : " French bread with black forest ham and swiss cheese.",
     "onUse" : "You make the sandwich and hand it to the werewolf and devours it in one bite. He thanks you and gives you a huge smile.",
     "isStorable" : true,
-    "art" : "TBD"
+    "art" : "⠀⠀⠀⠀⠀⡀⢤⠄⠒⠂⠈⠉⠉⠉⠉⠉⠋⢉⠒⠒⠠⠄⣀⠀⠀⠀⠀⠀⠀\n⠀⢀⡠⠔⠂⡁⠀⠁⠀⠀⠀⠀⠤⠀⠀⢀⠀⢁⡀⠀⠦⠀⢠⡤⠬⠒⠤⡀⠀⠀\n⠀⢸⢬⢀⣀⡒⠒⣈⠁⠒⡀⣧⡴⡬⣤⡦⢰⢾⡗⠽⣥⠢⣤⠙⣧⠈⡅⣱⠀⠀\n⠀⢸⣿⣀⠀⠀⠉⠢⢖⡺⢭⣠⣘⢛⣨⣾⣽⣿⢊⠽⣮⡹⢜⡻⢀⠔⠊⣵⠀⠀\n⠀⣄⣿⣟⣶⣤⣈⠀⠀⠀⠑⡋⠅⣛⠲⢦⠒⡺⣣⣱⣾⢋⡭⠒⢁⠀⣨⣾⡀⠀\n⡰⠋⢩⡑⡧⣤⣈⣓⣦⣄⣀⠈⠀⠀⠑⠪⢔⣩⣻⡯⠒⠁⠀⢀⡤⡾⢿⠶⢄⣁\n⠈⢢⢜⡇⢿⠘⣧⡈⠋⠐⢻⠟⠲⣤⡀⠀⠀⢿⡇⠀⠀⣠⠶⠛⣉⣰⣢⣾⣦⣁\n⢀⣴⣅⣎⠙⣤⣯⣄⣓⣒⣓⠦⣤⠝⠛⠻⢷⣾⣧⣶⣟⢝⣠⡉⠀⢀⣈⣴⠌⠉\n⠛⢻⣾⣉⠻⠛⠟⢙⣻⣏⠐⠺⠶⠤⠤⠠⠤⠀⢈⡹⠯⠉⢠⣽⣿⠟⠁⢼⠀⠀\n⠀⠀⠉⠙⠢⢴⣚⠉⠀⠸⣿⡁⣄⠀⠀⠀⠉⠁⣰⣤⠴⣒⠜⠋⠁⢀⣼⡟⠀⠀\n⠀⠀⠀⠀⠀⠀⠈⠙⠢⢤⣠⡉⠒⠒⠒⢖⠮⣙⣻⠕⠊⠀⠀⣠⡴⠛⠁⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⢤⣀⠈⠈⢿⡇⠀⢀⣴⠞⠉⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⣾⣷⠾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀"
   },
   {
     "name" : "Teddy",
@@ -60,7 +60,7 @@
     "description": " It is a shiny sword, adorned with intricate carvings. ",
     "onUse": " You swing the sword and it makes a whooshing sound. ",
     "isStorable": true,
-    "art": "TBD"
+    "art": "        \\\n _      ||__________________\n(_|%|%|%|[__________________>\n        ||\n         \\"
   }
 
 ]
