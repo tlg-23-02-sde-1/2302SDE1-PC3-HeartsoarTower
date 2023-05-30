@@ -21,7 +21,7 @@ public class Player {
             }
         }
         String handkerchief = "Handkerchief";
-        String amulet = "Magical Amulet";
+        String amulet = "Amulet";
         String sword = "Sword";
         for (Item item : items){
             if (item.getName().equals(handkerchief)){
