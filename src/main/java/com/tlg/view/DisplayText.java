@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class DisplayText extends Display{
     private final static int MAX_LINES = 4;
-    private final int MAX_WIDTH = 150;
+    private final int MAX_WIDTH = 250;
     private String display;
 
     public DisplayText() {
