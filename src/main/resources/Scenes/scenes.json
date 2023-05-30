@@ -32,7 +32,7 @@
   {
     "room"     : "plaisure",
     "description"     : [
-      "Succubus present",
+      "A succubus is hiding behind the door.  She whispers in your ear --- \"I can give you great pleasure.  Do you dare reject me?\"",
       "Should never see this",
       "Plaisure complete"
     ],
@@ -42,7 +42,7 @@
   {
     "room"     : "den",
     "description"     : [
-      "Dire bear present",
+      "A direbear is shaking off the winter snow.  He looks very hungry, but may still talk to you.",
       "Should never see this",
       "Den complete"
     ],
@@ -52,9 +52,9 @@
   {
     "room"     : "Parlor",
     "description"     : [
-      "As you enter the parlor, a sense of unease washes over you. The room's opulent decor contrasts with the eerie atmosphere. Suddenly, a chilling presence manifests before your eyes. Standing in the center is a massive werewolf, its form exuding both power and vulnerability.",
+      "A werewolf is growling at you from the center of the parlor.  In a cracking voice he says: \"I don't want to hurt you. I'm ugly and I can't stop from changing.  I've never had hair in all these places before.  I need someone to TEACH me what's going on with me\" ",
       "Should never see this",
-      "Parlor complete"
+      "The werewolf is scratching his fleas but pays no mind to you."
     ],
     "items"    : [],
     "monsters" : ["werewolf"]
@@ -72,7 +72,7 @@
   {
     "room"     : "Ballroom",
     "description"     : [
-      "A zombie is slow dancing in the center of the large ballroom.  His arms are up in the air like he's trying to dance with someone.  He keeps saying \"Fren, fren, fren\" over and over.",
+      "A zombie is slow dancing in the center of the large ballroom.  His arms are up in the air like he's trying to dance with someone.  He keeps saying \"Fren, fren, fren\" over and over.  Ugh... maybe he wants to dance with you?",
       "Should never see this",
       "A zombie is slow dancing in the center of the large ballroom with the ghost."
     ],
@@ -82,7 +82,7 @@
   {
     "room"     : "Conservatory",
     "description"     : [
-      "An Alien.  He's scared.  Won't look outside.  There's a window.",
+      "An Alien.  He's scared.  Won't look outside.  There's a window.  Try to comfort him.",
       "Should never see this",
       "As you enter the conservatory a warm breeze greets you from the open window.  The alien is still there, but he's looking out the window now.  Below you have the ballroom.  Up you have the bedroom."
     ],

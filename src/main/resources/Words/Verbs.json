@@ -102,6 +102,24 @@
   ],
   "affirm" : [
     "affirm"
+  ],
+  "feed" : [
+    "feed"
+  ],
+  "teach" : [
+    "teach",
+    "taught",
+    "teaching"
+  ],
+  "show" : [
+    "show",
+    "display",
+    "present"
+  ],
+  "dance" : [
+    "dance",
+    "dancing",
+    "danced",
+    "dances"
   ]
-
 }

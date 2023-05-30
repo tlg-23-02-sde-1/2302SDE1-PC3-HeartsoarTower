@@ -68,41 +68,6 @@
     "art" : "\n\n\n                                                                      ,▄▄▄▄▄\n                                                                   ▄███████████▄\n                                                                 ▄██████▀▀▀██████▄\n                                                                ▄█████'     ██████▄\n                                                               ▄██████      ███████▌\n     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███████████████████████████████▄▄▄████████▀         ▀█████\n    ▄██████████████████████████████████████████████████████████████⌐           █████\n    ╙███████████████████████████████████████████████████████████████          ▄█████\n          █████   █████   ▀  ▀▀▀'---`                          ▀██████K     ███████▌\n          █████   █████                                         ▐█████▌     ▐██████\n          █████   █████                                          ╙█████▄▄,▄▄█████▀\n          █████   █████                                            ▀███████████▀\n          █████   █████                                               `▀▀▀▀▀`\n          ████▀    ▀▀▀▀\n\n\n\n\n\n\n\n",
     "item" : null
   },
-
-  {
-    "name": "zombie",
-    "successes": [
-      ["talk", "zombie"],
-      ["give", "ghost"]
-    ],
-    "failures": [
-      "run",
-      "yell",
-      "scream",
-      "hide",
-      "attack",
-      "fight",
-      "hit",
-      "kick",
-      "punch",
-      "slap",
-      "bite",
-      "scratch",
-      "go"
-    ],
-    "dialogue": [
-      "The zombie emits a low groan, its voice filled with melancholy.",
-      "The zombie doesn't respond to your presence, its vacant eyes staring into nothingness.",
-      "The zombie's feeble groan becomes slightly louder, as if longing for companionship."
-    ],
-    "description": [
-      "The grand ballroom is filled with dust-covered chandeliers, crumbling pillars, and faded tapestries.  Suddenly, a low groan interrupts the silence. You see what looks a dead man walking? A zombie perhaps."
-    ],
-    "sceneFailed": "The zombie becomes overwhelmed by its hunger for flesh and lunges at you with a ferocious bite. Your life comes to a gruesome end.",
-    "art" : "                           ,▄M▌▓]█▓N▄▄                           ,▄,\n                         ╓╜ ▐N▓▓▀▓▓▀\"▓▓▄                   ,≡&Ñ╩▀▀██⌐\n                        ▐    ▀█▓▀█▀▄▓▓▄]▄,           ╓≡*\"`    ∞▄,,▄█\n                        ╢     ▓U██  █▌╒▀█ ▌     ╓MT▓▄,▄▄, ▌  ╟╖╓,▄▓▀\n                        ▓══w  █`  ▀▄▀▌  █U▌▄M▌\"    █████▓╝`╙▄,╟\n                        ¥▄╥, b$  ▄██N  ▐M\"   ▌     █▀▀▌█    ▀▀`\n                         ▐████M▓▀█▀▄▓@▓███  ▐  ,∞╜\n                          ▐▀▓▀`██▌▄▓▀æ**██  ╙▓▓\n                         ,▀m,  ▀▓▀╚\",,Æ▓▄ªmm▄╩`\n                      ╓M╙▀ ▄▓▓M    ,▄m$╩▀    ▀\n                     ▓▌mⁿ`     ,,╓Æ'  ▌      ▐▌\n                    ▀`   ╓████M▀   '$▓      ,▀▓\n                    ██▄  ███▀   ▐▄  ▐\"     4,@ ▀,\n                     ██\"` ▐▀` ,Æ-     ,,,▄P\"    ▐\n                     ▀`       ╙▄        , ,   ▓\"▐▄\n                              ▐▓▓▓▓m═*▐▀▀╩▀▀ⁿ▀▄▓▓╜╙W\n                             ▐'   '▀N ▐     ` `     ╙N\n                           ▄▀        \"█,,,            ╙N\n                         ,╝       ,gⁿ\"    `*▄           ╙N\n                        ╓▀       Æ`           \"N▄          ▌\n                        ▓ ▄m²ⁿⁿ▌`                 ╙¥M\",▄* Æ\n                         ▓     ▀                    ⁿ▌     ▐\n                          ▌     ▐                    ▌     ]\n                          ]    `▐▀                  ▓       ▄\n                           Ç,,,æ▀▄▓                 ▌▀m▄▀╜▀▐``\n                            ╓▀▀  ▐                     ▌    ╚µ\n                       ,╓╥∞▀▄    ╒▀                   ▌`    ▐▄▐▓▓▄▄\n                      ██▀▀█▀▌m ╓∞wÆ                   ╙ⁿ\"ⁿW▐W▓█▄▌▓▀",
-    "item" : null
-
-  },
   {
     "name": "succubus",
     "successes": [
@@ -165,7 +130,7 @@
       "The direbear's growl reverberates through the den, as if asserting its dominance and warning you to proceed with caution."
     ],
     "description": [
-      "The door opens, revealing a den where a massive direbear resides. The bear, having just awoken from its winter hibernation, shakes off the snow clinging to its thick fur. Its hungry gaze locks onto you, baring its teeth and slowly approaching. The growls coming from its stomach compete with the growls emanating from the bear itself.",
+      "As you talk to the bear, he describes that he hasn't eaten since last fall.  Perhaps you can try to feed the direbear?",
       "The warmth of the den invites you to take a nap, but time is of the essence. Above the stairs lies the parlor, while descending the stairs leads you back to the Chambre de Plaisir."
     ],
     "sceneFailed": "Driven by its insatiable hunger, the direbear launches itself at you with a ferocious bite. Your life comes to an end.",
@@ -199,8 +164,8 @@
       "The werewolf's voice resonates with a blend of human and beast, carrying a deep yearning for freedom and acceptance."
     ],
     "description": [
-      "You taught the werewolf that it's okay to be different.  It's okay to be a werewolf.  It's okay to be yourself.  It just wishes someone would teach it some understanding",
-        "You showed the werewolf that you understand it.  You understand that it's okay to be different.  It's okay to be a werewolf.  It's okay to be yourself."
+      "You taught the werewolf that it's okay to be different.  It's ok to be growing up.  It just wishes someone would SHOW UNDERSTANDING",
+      "You showed the werewolf that you understand it.  You understand that it's okay to be different.  It's okay to be a werewolf.  It's okay to be yourself."
     ],
     "sceneFailed": "Driven by fear and aggression, the werewolf succumbs to his wild instincts. With a ferocious leap, he attacks you with untamed fury, bringing an end to your journey.",
     "art" : "                              __\n                            .d$$b\n                          .' TO$;\\\n                         /  : TP._;\n                        / _.;  :Tb|\n                       /   /   ;j$j\n                   _.-\"       d$$$$\n                 .' ..       d$$$$;\n                /  /P'      d$$$$P. |\\\n               /   \"      .d$$$P' |\\^\"l\n             .'           `T$P^\"\"\"\"\"  :\n         ._.'      _.'                ;\n      `-.-\".-'-' ._.       _.-\"    .-\"\n    `.-\" _____  ._              .-\"\n   -(.g$$$$$$$b.              .'\n     \"\"^^T$$$P^)            .(:\n       _/  -\"  /.'         /:/;\n    ._.'-'`-'  \")/         /;/;\n `-.-\"..--\"\"   \" /         /  ;\n.-\" ..--\"\"        -'          :\n..--\"\"--.-\"         (\\      .-(\\\n  ..--\"\"              `-\\(\\/;`\n    _.                      :\n                            ;`-\n                           :\\\n                           ;  bug",
@@ -265,6 +230,7 @@
   {
     "name": "Zombie",
     "successes": [
+      ["dance", "zombie"],
       ["use", "casper"]
     ],
     "failures": [
@@ -282,6 +248,7 @@
       "He won't speak back... he just keeps slow dancing."
     ],
     "description": [
+      "You slow dance with the zombie.  Gross he's drooling.  You can't do this forever.  Maybe you can give him a friend.  (try to use Casper) ",
       "You give the zombie the ghost.  He looks at it and starts slow dancing with it.  He's happy now.  He's got a friend."
     ],
     "sceneFailed": "The zombie gets angry and attacks you.  You are no match for his strength and he eats your brains.",
@@ -311,7 +278,7 @@
       "Alien dialogue5"
     ],
     "description": [
-      "You comfort the alien.  Not everything is scary.",
+      "You comfort the alien.  Not everything is scary.  Perhaps if you open the window, he will see that the world is not so bad.  (try to open window)",
       "You open the window, and the alien timidly approaches while holding his breath.  Eventually he breathes in the fresh air and realized there was nothing to be afraid of."
     ],
     "sceneFailed": "Alien zaps you with his laser gun.  You are dead.",

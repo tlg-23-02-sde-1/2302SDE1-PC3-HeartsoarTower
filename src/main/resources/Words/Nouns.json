@@ -46,7 +46,10 @@
   "succubus": ["succubus"],
   "werewolf": ["werewolf"],
   "bear": ["bear"],
-  "direbear": ["direbear"],
+  "direbear": ["direbear",
+    "dire",
+    "bear"
+    ],
   "vampire": ["vampire"],
   "mirror": ["mirror"],
   "zombie": ["zombie"],
@@ -76,5 +79,6 @@
   ],
   "off" : ["off"],
   "key" : ["key"],
-  "blanket" : ["blanket"]
+  "blanket" : ["blanket"],
+  "understanding" : ["understanding"]
 }
