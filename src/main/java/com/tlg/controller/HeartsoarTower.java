@@ -48,8 +48,6 @@ class HeartsoarTower {
         Scanner scanner = new Scanner(System.in);
         boolean justEntered = true;
         while (isRunning) {
-//            Winning condition:
-            if (scenes.size() == 0) winGame();
 //            Just entered a room:
             if (justEntered) grabScene();
             justEntered = false;
@@ -72,29 +70,7 @@ class HeartsoarTower {
         }
     }
 
-    private void winGame() {
-//        Clear screen:
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println(" ____      ____                   _                         \n" +
-                "|_  _|    |_  _|                 | |                        \n" +
-                "  \\ \\  /\\  / / .--.   _   _   __ | |                        \n" +
-                "   \\ \\/  \\/ // .'`\\ \\[ \\ [ \\ [  ]| |                        \n" +
-                "    \\  /\\  / | \\__. | \\ \\/\\ \\/ / |_|                        \n" +
-                " ____\\/__\\/   '.__.'   \\__/\\__/  (_)                        \n" +
-                "|_  _||_  _|                                                \n" +
-                "  \\ \\  / / .--.   __   _    _   _   __   .--.   _ .--.      \n" +
-                "   \\ \\/ // .'`\\ \\[  | | |  [ \\ [ \\ [  ]/ .'`\\ \\[ `.-. |     \n" +
-                "   _|  |_| \\__. | | \\_/ |,  \\ \\/\\ \\/ / | \\__. | | | | |  _  \n" +
-                "  |______|'.__.'  '.__.'_/   \\__/\\__/   '.__.' [___||__](_) \n");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.exit(0);
 
-    }
 
     private void grabScene() {
         for (Scene scene : scenes) {

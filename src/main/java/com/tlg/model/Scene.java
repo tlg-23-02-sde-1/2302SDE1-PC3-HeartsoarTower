@@ -61,7 +61,31 @@ public class Scene {
         sceneMonsters.add(e);
     }
     public void defeatMonster(Monster e, DisplayText text, DisplayInput inputter, List<Room> rooms){
+        if(e.getName().equalsIgnoreCase("Prince")) winGame();
         displayArt.defeatMonster(e, text, inputter, rooms);
         sceneMonsters.remove(e);
     }
+
+    private void winGame() {
+//        Clear screen:
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println(" ____      ____                   _                         \n" +
+                    "|_  _|    |_  _|                 | |                        \n" +
+                    "  \\ \\  /\\  / / .--.   _   _   __ | |                        \n" +
+                    "   \\ \\/  \\/ // .'`\\ \\[ \\ [ \\ [  ]| |                        \n" +
+                    "    \\  /\\  / | \\__. | \\ \\/\\ \\/ / |_|                        \n" +
+                    " ____\\/__\\/   '.__.'   \\__/\\__/  (_)                        \n" +
+                    "|_  _||_  _|                                                \n" +
+                    "  \\ \\  / / .--.   __   _    _   _   __   .--.   _ .--.      \n" +
+                    "   \\ \\/ // .'`\\ \\[  | | |  [ \\ [ \\ [  ]/ .'`\\ \\[ `.-. |     \n" +
+                    "   _|  |_| \\__. | | \\_/ |,  \\ \\/\\ \\/ / | \\__. | | | | |  _  \n" +
+                    "  |______|'.__.'  '.__.'_/   \\__/\\__/   '.__.' [___||__](_) \n");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.exit(0);
+        }
 }
